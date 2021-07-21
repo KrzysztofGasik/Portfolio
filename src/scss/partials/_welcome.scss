@@ -1,0 +1,28 @@
+.welcome__wrapper {
+  background: $mainColor;
+  color: #fff;
+  display: grid;
+  text-align: center;
+  padding: 4em;
+  .column__right {
+    display: none;
+  }
+}
+
+.get__in__touch {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 200px;
+  font-weight: bold;
+  svg {
+    display: block;
+    margin-right: 1em;
+  }
+}
+
+svg.scroll {
+  width: 30px !important;
+  height: 30px;
+  margin-top: 2em;
+}
