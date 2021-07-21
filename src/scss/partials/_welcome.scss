@@ -1,9 +1,14 @@
 .welcome__wrapper {
-  background: $mainColor;
   color: #fff;
   display: grid;
   text-align: center;
-  padding: 4em;
+  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+  .column__left {
+    background: $mainColor;
+    padding: 4em;
+  }
   .column__right {
     display: none;
   }
@@ -25,4 +30,71 @@ svg.scroll {
   width: 30px !important;
   height: 30px;
   margin-top: 2em;
+}
+
+@media only screen and (min-width: 800px) {
+  .welcome__wrapper {
+    text-align: center;
+    padding: 0;
+    .column__left {
+      padding: 4em;
+    }
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .welcome__wrapper {
+    height: 90vh;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 66% auto;
+    background: unset;
+    padding: 0;
+    .column__left {
+      background: $mainColor;
+      padding: 6em 8em 6em 4em;
+      text-align: left;
+      h1 {
+        font-size: 3em;
+        line-height: 1.2em;
+      }
+      .get__in__touch {
+        margin: unset;
+      }
+    }
+    .column__right {
+      display: block;
+      margin: 15% 0 0 -50%;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  .welcome__wrapper {
+    .column__left {
+      padding: 6em 8em 6em 10em;
+    }
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  .welcome__wrapper {
+    .column__left {
+      padding: 9em 20em 6em 20em;
+    }
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-30%);
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

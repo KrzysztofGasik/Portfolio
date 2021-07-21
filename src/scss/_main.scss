@@ -1,19 +1,22 @@
 $mainColor: #9c30cf;
 $mainColorDark: #8614b9;
 $mainColorLight: #b247e5;
+$mainColorLighter: #d69df1;
 $navigationColor: #8d1ec1;
+$navigationColorRgba: rgba(141, 30, 193, 0.9);
 $descriptionColor: #3b3b3b;
+$white: #fff;
 
-@import 'partials/reset';
-@import 'partials/fonts';
-@import 'partials/navigation';
-@import 'partials/welcome';
-@import 'partials/featproj';
-@import 'partials/skills';
-@import 'partials/projects';
+@import "partials/reset";
+@import "partials/fonts";
+@import "partials/navigation";
+@import "partials/welcome";
+@import "partials/featproj";
+@import "partials/skills";
+@import "partials/projects";
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   height: 100vh;
 }
 
@@ -23,7 +26,11 @@ section {
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -31,5 +38,23 @@ section {
   }
   60% {
     transform: translateY(-15px);
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  section {
+    padding: 4em;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  section {
+    padding: 10em 10em 4em 10em;
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  section {
+    padding: 6em 20em 4em 20em;
   }
 }
