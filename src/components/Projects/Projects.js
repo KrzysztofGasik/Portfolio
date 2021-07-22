@@ -15,7 +15,7 @@ export default function Projects() {
       description: 'This was my first app which help me organize my day',
       image: note,
       repo: 'LetMeOrganizeYourDay',
-      stack: [faReact,faJs,faSass]
+      stack: [faReact, faJs, faSass]
     },
     {
       name: 'Oddam Rzeczy',
@@ -23,7 +23,7 @@ export default function Projects() {
       description: 'Check your wardrobe and attic. Do you have any spare clothes and things? If answer is yes, please visit this app and share those things with other people. ',
       image: things,
       repo: 'Oddam-Rzeczy',
-      stack: [faReact,faJs,faSass]
+      stack: [faReact, faJs, faSass]
     },
     {
       name: 'Catopedia',
@@ -31,7 +31,7 @@ export default function Projects() {
       description: 'Do you love cats? If yes, this app is for you.',
       image: cat,
       repo: 'Catopedia',
-      stack: [faReact,faJs,faSass]
+      stack: [faReact, faJs, faSass]
     },
     {
       name: 'Pollen Alert',
@@ -39,7 +39,7 @@ export default function Projects() {
       description: 'Are you allergic to pollen and have allergy to grass and other allergens? Check out this app and it will tell you on which months your allergy is strongest or weakest.',
       image: pollen,
       repo: 'PollenAlert',
-      stack: [faReact,faJs,faSass]
+      stack: [faReact, faJs, faSass]
     }
   ];
 
@@ -49,7 +49,7 @@ export default function Projects() {
 
       {projects.map(project => {
         return (
-          <div key={project.name} className='portfolio__container transition3'>
+          <div key={project.name} className='portfolio__container'>
             <div className='portfolio__left'>
               <div className='inner__container'>
                 <p className='project__title'>{project.name}</p>
@@ -60,11 +60,14 @@ export default function Projects() {
               </div>
               <div className='portolio__image'>
                 <div className='portfolio__image__techstack'>
-                {project.stack.map((tech,index)=>{
-                  return(
-                    <FontAwesomeIcon key={index}icon={tech}/>
-                  )
-                })}
+                  <p>Create with:</p>
+                  <div className="image__wrapper">
+                    {project.stack.map((tech, index) => {
+                      return (
+                        <FontAwesomeIcon key={index} icon={tech} />
+                      )
+                    })}
+                  </div>
                 </div>
                 <img src={project.image} alt='' />
               </div>

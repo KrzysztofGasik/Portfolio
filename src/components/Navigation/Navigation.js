@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import Hamburger from './Hamburger';
+import CloseIcon from './CloseIcon';
 
 function Navigation() {
   const navigationElements = [
@@ -15,15 +16,16 @@ function Navigation() {
   ];
   const [toggle, setSwitch] = useState(false);
 
-  const switchHamburger = () => {
+  const switchMenu = () => {
     setSwitch(!toggle);
   };
+  
 
   return (
     <div className='navigation__container'>
       <header>
         <a href='https://www.linkedin.com/in/krzysztof-gasik'>Krzysztof Gasik</a>
-        <Hamburger onClick={switchHamburger} />
+        <Hamburger onClick={switchMenu} />
         <nav>
           <ul
             className={toggle ? 'open navigation__links' : 'navigation__links'}
@@ -44,6 +46,7 @@ function Navigation() {
               );
             })}
           </ul>
+          <CloseIcon onClick={switchMenu}/>
         </nav>
       </header>
       <div className='navigation__social__icons'>

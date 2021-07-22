@@ -1,113 +1,176 @@
+body {
+  overflow-x: hidden;
+}
+
 .navigation__container {
-  background: $navigationColor;
-  a {
-    color: #fff;
-  }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
 }
 
 header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 2em;
-  ul {
-    display: flex;
-    a {
-      display: block;
-      padding: 0 1em;
-    }
+  background: $navigationColor;
+  nav {
+    width: 100%;
   }
+  a {
+    display: block;
+    padding: 0 1em;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+#Home {
+  margin-top: 5em;
+}
+
+.hamburger__icon {
+  position: absolute;
+  cursor: pointer;
+  right: 5%;
+  top: 50%;
+  -webkit-transform: translate(-5%, -50%);
+  -ms-transform: translate(-5%, -50%);
+  transform: translate(-5%, -50%);
+  z-index: 2;
+}
+
+.close__icon {
+  position: absolute;
+  cursor: pointer;
+  right: 5%;
+  top: 50%;
+  transform: translate(-5%, -50%);
+  z-index: 3;
+  opacity: 0;
+  transition: all 0.5s ease;
+  display: none;
+  svg.fa-times-circle {
+    color: $white;
+    width: 2em;
+    height: 2em;
+  }
+}
+
+.line {
+  width: 30px;
+  height: 3px;
+  background: $white;
+  margin: 5px;
+}
+
+.navigation__links {
+  position: fixed;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  width: 100%;
+  clip-path: inset(0 0 0 100%);
+  transition: all 1s ease;
+  pointer-events: none;
+  z-index: 2;
+  background: $navigationColor;
+}
+
+.navigation__links.open {
+  clip-path: inset(0 0 0 0%);
+  pointer-events: all;
+  align-items: flex-start;
+}
+
+.navigation__links.open+.close__icon {
+  display: block;
+}
+
+.navigation__links li {
+  opacity: 0;
+}
+
+.navigation__links li.fade {
+  opacity: 1;
+  padding: 1em;
+}
+
+.navigation__links li.fade:hover {
+  cursor: pointer;
+}
+
+.navigation__links li a {
+  font-size: 25px;
+}
+
+.navigation__links li:nth-child(1) {
+  transition: all 0.5s ease 0.2s;
+}
+
+.navigation__links li:nth-child(2) {
+  transition: all 0.5s ease 0.4s;
+}
+
+.navigation__links li:nth-child(3) {
+  transition: all 0.5s ease 0.6s;
+}
+
+.navigation__links li:nth-child(4) {
+  transition: all 0.5s ease 0.8s;
+}
+
+.navigation__links.open+.close__icon {
+  opacity: 1;
 }
 
 .navigation__social__icons {
   display: none;
 }
 
-@media only screen and (max-width: 800px) {
-  body {
-    overflow-x: hidden;
-  }
-
+@media only screen and (min-width: 800px) {
   .navigation__container {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-  }
-
-  header {
-    position: relative;
-  }
-
-  nav {
-    width: 100%;
     background: $navigationColor;
+    a {
+      color: #fff;
+    }
   }
-
-  #Home {
-    margin-top: 5em;
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    nav {
+      width: unset;
+    }
+    ul {
+      display: flex;
+      a {
+        display: block;
+        padding: 0 1em;
+      }
+    }
   }
-
+  .navigation__links+.close__icon,
+  .navigation__social__icons,
   .hamburger__icon {
-    position: absolute;
-    cursor: pointer;
-    right: 5%;
-    top: 50%;
-    -webkit-transform: translate(-5%, -50%);
-    -ms-transform: translate(-5%, -50%);
-    transform: translate(-5%, -50%);
-    z-index: 2;
-  }
-  .line {
-    width: 30px;
-    height: 3px;
-    background: $white;
-    margin: 5px;
+    display: none;
   }
   .navigation__links {
-    position: fixed;
-    flex-direction: column;
-    left: 0;
-    top: 0;
-    width: 100%;
-    clip-path: inset(0 0 0 100%);
-    transition: all 1s ease;
+    position: static;
+    flex-direction: unset;
+    width: auto;
+    clip-path: none;
+    transition: none;
     pointer-events: none;
-    z-index: 1;
-    background: $navigationColor;
-    border-top-left-radius: 1em;
-    border-bottom-left-radius: 1em;
-  }
-  .navigation__links.open {
-    clip-path: inset(0 0 0 0%);
-    pointer-events: all;
-    align-items: flex-start;
-  }
-  .navigation__links li {
-    opacity: 0;
-  }
-  .navigation__links li.fade {
-    opacity: 1;
-    padding: 1em;
-  }
-  
-  .navigation__links li.fade:hover {
-    cursor: pointer;
-  }
-  
-  .navigation__links li a {
-    font-size: 25px;
-  }
-  .navigation__links li:nth-child(1) {
-    transition: all 0.5s ease 0.2s;
-  }
-  .navigation__links li:nth-child(2) {
-    transition: all 0.5s ease 0.4s;
-  }
-  .navigation__links li:nth-child(3) {
-    transition: all 0.5s ease 0.6s;
-  }
-  .navigation__links li:nth-child(4) {
-    transition: all 0.5s ease 0.8s;
+    z-index: unset;
+    justify-content: flex-end;
+    li {
+      opacity: 1;
+      a {
+        font-size: 1em;
+      }
+    }
   }
 }
 
@@ -116,8 +179,7 @@ header {
     display: grid;
     grid-template-columns: 66% auto;
     background: unset;
-
-    header{
+    header {
       background: $navigationColor;
     }
   }
@@ -140,7 +202,6 @@ header {
       }
     }
   }
-
   .navigation__social__icons ul li a svg {
     color: $descriptionColor;
   }

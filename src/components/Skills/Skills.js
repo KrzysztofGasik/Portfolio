@@ -24,7 +24,7 @@ export default function Skills() {
                 <ul>
                     {skillSet.map(skill => {
                         return (
-                            <li className='transition' key={skill.name} >
+                            <li key={skill.name} >
                                 <div className='icon__container'>
                                     <FontAwesomeIcon icon={skill.icon} className={skill.name} /></div>
                                 <p className='skill__title'>{skill.name}</p>

@@ -1,4 +1,3 @@
-
 @mixin delay {
   @for $i from 1 through 3 {
     &:nth-child(#{$i}) {
@@ -16,7 +15,7 @@
     letter-spacing: 0.3em;
     font-size: 0.85em;
   }
-  .project__link a{
+  .project__link a {
     color: #000;
     font-weight: bold;
     font-size: 1.3em;
@@ -31,31 +30,42 @@
   }
   .portfolio__container img {
     border-radius: 0.5em;
-    margin-bottom: 1.5em;
+    // margin-bottom: 1.5em;
+    width: 100%;
+    max-width: none;
   }
-  .portfolio__left .inner__container {
+  .inner__container {
     grid-area: portfolio-description;
   }
-  
-  .portfolio__left .portolio__image {
+  .portolio__image {
     grid-area: portfolio-img;
     position: relative;
   }
   
   .portfolio__image__techstack {
     width: 100%;
-    height: calc(100% - 2em);
+    height: calc(100% - 0.5em);
     position: absolute;
-    background: rgba(75,75,75,0.5);
+    background: rgba(75, 75, 75, 0.5);
     border-radius: 0.5em;
+    clip-path: inset(0% 0% 0% 0%);
+    transition: all .75s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p {
+      color: $white;
+      font-size: 2em;
+    }
+  }
+  
+  .image__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    clip-path: inset(0% 0% 0% 100%);
-    transition: all .75s ease;
   }
   
-  .portfolio__image__techstack svg {
+  .image__wrapper svg {
     color: $white;
     margin: 1em;
     width: (100% / 3);
@@ -63,15 +73,12 @@
     opacity: 0;
     @include delay;
   }
-  
   .portolio__image:hover .portfolio__image__techstack {
     clip-path: inset(0% 0% 0% 0%)
   }
-  
   .portolio__image:hover .portfolio__image__techstack svg {
     opacity: 1;
   }
-
 }
 
 @media only screen and (min-width: 800px) {
@@ -89,29 +96,27 @@
     grid-template-areas: "portfolio-img portfolio-description";
     grid-template-columns: 60% 40%;
   }
-  .portfolio__left .inner__container {
+  .inner__container {
     display: grid;
     place-content: center;
   }
-  .portfolio__left .portolio__image {
+  .portolio__image {
     padding: 0 0.5em;
   }
-  
-  .portfolio .portfolio__image__techstack {
+  .portfolio__image__techstack {
     width: calc(100% - 1em);
-    height: calc(100% - 2em);
+    height: calc(100% - 0.5em);
   }
-  
 }
 
 @media only screen and (min-width: 1550px) {
   .portfolio__container {
     padding: 0 15em;
   }
-}  
+}
 
 @media only screen and (min-width: 2000px) {
   .portfolio__container {
     padding: 0 25em;
   }
-}  
+}
