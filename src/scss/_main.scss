@@ -1,9 +1,18 @@
-$mainColor: #9c30cf;
-$mainColorDark: #8614b9;
-$mainColorLight: #b247e5;
-$mainColorLighter: #d69df1;
-$navigationColor: #8d1ec1;
-$navigationColorRgba: rgba(141, 30, 193, 0.9);
+// $mainColor: #9c30cf;
+// $mainColorDark: #8614b9;
+// $mainColorLight: #b247e5;
+// $mainColorLighter: #d69df1;
+// $navigationColor: #8d1ec1;
+// $navigationColorRgba: rgba(141, 30, 193, 0.9);
+// $descriptionColor: #3b3b3b;
+// $white: #fff;
+
+$mainColor: #2472ff;
+$mainColorDark: #105eff;
+$mainColorLight: #3886ff;
+$mainColorLighter: #4c9aff;
+$navigationColor: #105eff;
+$navigationColorRgba: rgba(16, 94, 255, 0.9);
 $descriptionColor: #3b3b3b;
 $white: #fff;
 
@@ -23,22 +32,6 @@ body {
 section {
   padding: 4em 2em;
   text-align: center;
-}
-
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
 }
 
 @media only screen and (min-width: 1050px) {

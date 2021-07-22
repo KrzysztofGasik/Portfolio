@@ -1,6 +1,14 @@
+
+@mixin delay {
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      transition: all 1s #{$i * .3}s ease-in;
+    }
+  }
+}
+
 .portfolio {
   background: #f7f7f7;
-
   .project__title {
     text-transform: uppercase;
     font-weight: bold;
@@ -8,15 +16,13 @@
     letter-spacing: 0.3em;
     font-size: 0.85em;
   }
-
-  .project__link {
+  .project__link a{
     color: #000;
     font-weight: bold;
     font-size: 1.3em;
     margin-top: 0.4em;
     display: block;
   }
-
   .project__description {
     color: $descriptionColor;
     margin-bottom: 3em;
@@ -27,26 +33,55 @@
     border-radius: 0.5em;
     margin-bottom: 1.5em;
   }
-
   .portfolio__left .inner__container {
     grid-area: portfolio-description;
   }
-
+  
   .portfolio__left .portolio__image {
     grid-area: portfolio-img;
+    position: relative;
   }
+  
+  .portfolio__image__techstack {
+    width: 100%;
+    height: calc(100% - 2em);
+    position: absolute;
+    background: rgba(75,75,75,0.5);
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: inset(0% 0% 0% 100%);
+    transition: all .75s ease;
+  }
+  
+  .portfolio__image__techstack svg {
+    color: $white;
+    margin: 1em;
+    width: (100% / 3);
+    height: 25%;
+    opacity: 0;
+    @include delay;
+  }
+  
+  .portolio__image:hover .portfolio__image__techstack {
+    clip-path: inset(0% 0% 0% 0%)
+  }
+  
+  .portolio__image:hover .portfolio__image__techstack svg {
+    opacity: 1;
+  }
+
 }
 
 @media only screen and (min-width: 800px) {
   .portfolio {
     padding: 5em;
   }
-
   .portfolio__container .portfolio__left {
     display: grid;
     grid-template-columns: 40% 60%;
   }
-
   .portfolio__container:nth-child(1n) .portfolio__left {
     grid-template-areas: "portfolio-description portfolio-img";
   }
@@ -54,13 +89,29 @@
     grid-template-areas: "portfolio-img portfolio-description";
     grid-template-columns: 60% 40%;
   }
-
   .portfolio__left .inner__container {
     display: grid;
     place-content: center;
   }
-
   .portfolio__left .portolio__image {
     padding: 0 0.5em;
   }
+  
+  .portfolio .portfolio__image__techstack {
+    width: calc(100% - 1em);
+    height: calc(100% - 2em);
+  }
+  
 }
+
+@media only screen and (min-width: 1550px) {
+  .portfolio__container {
+    padding: 0 15em;
+  }
+}  
+
+@media only screen and (min-width: 2000px) {
+  .portfolio__container {
+    padding: 0 25em;
+  }
+}  

@@ -1,17 +1,17 @@
-import { useState } from "react";
-import { Link } from "react-scroll";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import Hamburger from "./Hamburger";
+import { useState } from 'react';
+import { Link } from 'react-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import Hamburger from './Hamburger';
 
 function Navigation() {
   const navigationElements = [
-    "Home",
-    "Project",
-    "Skills",
-    "Projects",
-    "Contact",
+    'Home',
+    'Project',
+    'Skills',
+    'Projects',
+    'Contact',
   ];
   const [toggle, setSwitch] = useState(false);
 
@@ -20,17 +20,17 @@ function Navigation() {
   };
 
   return (
-    <div className="navigation__container">
+    <div className='navigation__container'>
       <header>
-        <a href="xx">asdfsadf</a>
+        <a href='https://www.linkedin.com/in/krzysztof-gasik'>Krzysztof Gasik</a>
         <Hamburger onClick={switchHamburger} />
         <nav>
           <ul
-            className={toggle ? "open navigation__links" : "navigation__links"}
+            className={toggle ? 'open navigation__links' : 'navigation__links'}
           >
             {navigationElements.map((element) => {
               return (
-                <li key={element} className={toggle ? "fade" : ""}>
+                <li key={element} className={toggle ? 'fade' : ''}>
                   <Link
                     to={element}
                     spy={true}
@@ -46,20 +46,20 @@ function Navigation() {
           </ul>
         </nav>
       </header>
-      <div className="navigation__social__icons">
+      <div className='navigation__social__icons'>
         <ul>
           <li>
-            <a href="https://github.com/KrzGas">
+            <a href='https://github.com/KrzGas'>
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/krzysztof-gasik">
+            <a href='https://www.linkedin.com/in/krzysztof-gasik'>
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </li>
           <li>
-            <a href="mailto:kgasik@gmail.com">
+            <a href='mailto:kgasik@gmail.com'>
               <FontAwesomeIcon icon={faEnvelope} />
             </a>
           </li>

@@ -7,9 +7,10 @@
   position: absolute;
   top: 0;
   left: 0;
+  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
   width: 200px;
   height: 200px;
-  border-radius: 50%;
+  // border-radius: 50%;
   background: $mainColorLighter;
   z-index: -1;
 }

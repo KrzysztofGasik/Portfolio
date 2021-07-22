@@ -66,23 +66,21 @@ header {
   .navigation__links {
     position: fixed;
     flex-direction: column;
-    height: 100vh;
+    left: 0;
+    top: 0;
     width: 100%;
-    // background: $actionColor;
-    /* -webkit-clip-path: circle(100px at 90% -10%); */
-    // clip-path: circle(100px at 90% -10%);
     clip-path: inset(0 0 0 100%);
     transition: all 1s ease;
     pointer-events: none;
     z-index: 1;
-    background: $navigationColorRgba;
+    background: $navigationColor;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
   }
   .navigation__links.open {
-    /* -webkit-clip-path: circle(1200px at 90% -10%); */
-    // clip-path: circle(1200px at 90% -10%);
     clip-path: inset(0 0 0 0%);
     pointer-events: all;
-    align-items: center;
+    align-items: flex-start;
   }
   .navigation__links li {
     opacity: 0;
@@ -91,6 +89,11 @@ header {
     opacity: 1;
     padding: 1em;
   }
+  
+  .navigation__links li.fade:hover {
+    cursor: pointer;
+  }
+  
   .navigation__links li a {
     font-size: 25px;
   }
