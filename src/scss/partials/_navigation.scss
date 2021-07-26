@@ -1,12 +1,12 @@
-body {
-  overflow-x: hidden;
-}
-
 .navigation__container {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 2;
+}
+
+#Home {
+  margin-top: 5em;
 }
 
 header {
@@ -26,10 +26,6 @@ header {
   }
 }
 
-#Home {
-  margin-top: 5em;
-}
-
 .hamburger__icon {
   position: absolute;
   cursor: pointer;
@@ -42,11 +38,10 @@ header {
 }
 
 .close__icon {
-  position: absolute;
+  position: fixed;
   cursor: pointer;
-  right: 5%;
-  top: 50%;
-  transform: translate(-5%, -50%);
+  right: 1%;
+  top: 1%;
   z-index: 3;
   opacity: 0;
   transition: all 0.5s ease;
@@ -72,19 +67,19 @@ header {
   top: 0;
   width: 100%;
   clip-path: inset(0 0 0 100%);
-  transition: all 1s ease;
-  pointer-events: none;
+  transition: clip-path 0.5s ease;
+  // pointer-events: none;
   z-index: 2;
   background: $navigationColor;
 }
 
 .navigation__links.open {
   clip-path: inset(0 0 0 0%);
-  pointer-events: all;
+  // pointer-events: all;
   align-items: flex-start;
 }
 
-.navigation__links.open+.close__icon {
+.navigation__links.open + .close__icon {
   display: block;
 }
 
@@ -121,7 +116,7 @@ header {
   transition: all 0.5s ease 0.8s;
 }
 
-.navigation__links.open+.close__icon {
+.navigation__links.open + .close__icon {
   opacity: 1;
 }
 
@@ -130,8 +125,13 @@ header {
 }
 
 @media only screen and (min-width: 800px) {
+  #Home {
+    margin-top: 0em;
+  }
+
   .navigation__container {
     background: $navigationColor;
+    position: static;
     a {
       color: #fff;
     }
@@ -141,19 +141,23 @@ header {
     justify-content: space-between;
     padding: 2em;
     nav {
-      width: unset;
+      width: auto;
     }
     ul {
       display: flex;
       a {
         display: block;
         padding: 0 1em;
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }
-  .navigation__links+.close__icon,
+  .navigation__links + .close__icon,
   .navigation__social__icons,
-  .hamburger__icon {
+  .hamburger__icon,
+  .close__icon {
     display: none;
   }
   .navigation__links {
@@ -162,7 +166,7 @@ header {
     width: auto;
     clip-path: none;
     transition: none;
-    pointer-events: none;
+    // pointer-events: all;
     z-index: unset;
     justify-content: flex-end;
     li {

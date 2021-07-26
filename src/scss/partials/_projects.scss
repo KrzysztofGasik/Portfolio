@@ -1,7 +1,7 @@
 @mixin delay {
   @for $i from 1 through 3 {
     &:nth-child(#{$i}) {
-      transition: all 1s #{$i * .3}s ease-in;
+      transition: all 1s #{$i * 0.3}s ease-in;
     }
   }
 }
@@ -30,7 +30,7 @@
   }
   .portfolio__container img {
     border-radius: 0.5em;
-    // margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
     width: 100%;
     max-width: none;
   }
@@ -41,15 +41,15 @@
     grid-area: portfolio-img;
     position: relative;
   }
-  
+
   .portfolio__image__techstack {
     width: 100%;
     height: calc(100% - 0.5em);
     position: absolute;
-    background: rgba(75, 75, 75, 0.5);
+    background: rgba(75, 75, 75, 0.85);
     border-radius: 0.5em;
-    clip-path: inset(0% 0% 0% 0%);
-    transition: all .75s ease;
+    clip-path: inset(0% 0% 0% 100%);
+    transition: all 0.75s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,14 +57,23 @@
       color: $white;
       font-size: 2em;
     }
+    .fa-react {
+      color: #61dbfb;
+    }
+    .fa-js {
+      color: #f7e420;
+    }
+    .fa-sass {
+      color: #c69;
+    }
   }
-  
+
   .image__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
+
   .image__wrapper svg {
     color: $white;
     margin: 1em;
@@ -74,7 +83,7 @@
     @include delay;
   }
   .portolio__image:hover .portfolio__image__techstack {
-    clip-path: inset(0% 0% 0% 0%)
+    clip-path: inset(0% 0% 0% 0%);
   }
   .portolio__image:hover .portfolio__image__techstack svg {
     opacity: 1;
@@ -103,9 +112,9 @@
   .portolio__image {
     padding: 0 0.5em;
   }
-  .portfolio__image__techstack {
+  .portfolio .portfolio__image__techstack {
     width: calc(100% - 1em);
-    height: calc(100% - 0.5em);
+    height: calc(100% - 2em);
   }
 }
 

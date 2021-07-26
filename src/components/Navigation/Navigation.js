@@ -1,44 +1,69 @@
-import { useState } from 'react';
-import { Link } from 'react-scroll';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import Hamburger from './Hamburger';
-import CloseIcon from './CloseIcon';
+import { useState, useEffect, useRef } from "react";
+import { Link } from "react-scroll";
+// import { Tween } from "react-gsap";
+import gsap from "gsap";
+import Hamburger from "./Hamburger";
+import CloseIcon from "./CloseIcon";
+import SocialIcons from "./SocialIcons";
 
 function Navigation() {
-  const navigationElements = [
-    'Home',
-    'Project',
-    'Skills',
-    'Projects',
-    'Contact',
-  ];
   const [toggle, setSwitch] = useState(false);
 
   const switchMenu = () => {
     setSwitch(!toggle);
   };
-  
+
+  useEffect(() => {
+    function hideMenu() {
+      if (window.innerWidth > 800) {
+        setSwitch(false);
+      }
+    }
+    window.addEventListener("resize", hideMenu);
+  }, [toggle]);
+
+  const navigationElements = [
+    "Home",
+    "Project",
+    "Skills",
+    "Projects",
+    "Contact",
+  ];
+
+  const container = useRef(null);
+
+  useEffect(() => {
+    const element = container.current;
+    gsap.set(element, { autoAlpha: 0 }); // ukrycie
+    const timeLine = gsap.timeline({ defaults: { ease: "power3.inOut" } });
+    timeLine.fromTo(
+      element,
+      { x: "-=1000" },
+      { x: "0", autoAlpha: 1, duration: 1 }
+    );
+  },[]);
 
   return (
-    <div className='navigation__container'>
+    // <Tween from={{y: '-100px'}} to={{y: '0px'}}>
+    <div ref={container} className="navigation__container">
       <header>
-        <a href='https://www.linkedin.com/in/krzysztof-gasik'>Krzysztof Gasik</a>
+        <a href="https://www.linkedin.com/in/krzysztof-gasik">
+          Krzysztof Gasik
+        </a>
         <Hamburger onClick={switchMenu} />
         <nav>
           <ul
-            className={toggle ? 'open navigation__links' : 'navigation__links'}
+            className={toggle ? "open navigation__links" : "navigation__links"}
           >
             {navigationElements.map((element) => {
               return (
-                <li key={element} className={toggle ? 'fade' : ''}>
+                <li key={element} className={toggle ? "fade" : ""}>
                   <Link
                     to={element}
                     spy={true}
                     smooth={true}
                     offset={-70}
-                    duration={500}
+                    duration={400}
                   >
                     {element}
                   </Link>
@@ -46,29 +71,12 @@ function Navigation() {
               );
             })}
           </ul>
-          <CloseIcon onClick={switchMenu}/>
+          <CloseIcon onClick={switchMenu} />
         </nav>
       </header>
-      <div className='navigation__social__icons'>
-        <ul>
-          <li>
-            <a href='https://github.com/KrzGas'>
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-          </li>
-          <li>
-            <a href='https://www.linkedin.com/in/krzysztof-gasik'>
-              <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-          </li>
-          <li>
-            <a href='mailto:kgasik@gmail.com'>
-              <FontAwesomeIcon icon={faEnvelope} />
-            </a>
-          </li>
-        </ul>
-      </div>
+      <SocialIcons />
     </div>
+    // </Tween>
   );
 }
 
