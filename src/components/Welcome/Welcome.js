@@ -22,7 +22,7 @@ export default function Welcome() {
     const timeLine = gsap.timeline();
     timeLine.fromTo(containerElement,{ x: "+=1000" },{ x: "0", autoAlpha: 1, duration: 1 },"+=1")
             .fromTo(reactLogo,{y:"-=500"},{y: "0", autoAlpha: 1, ease: 'Sine.easeOut'})
-            .fromTo(jsLogo,{y:"+=500"},{y: "0", autoAlpha: 1, ease: 'Sine.easeOut'})
+            .fromTo(jsLogo,{y:"+=500"},{y: "0", autoAlpha: 1, ease: 'Sine.easeOut'});
   },[]);
 
   return (

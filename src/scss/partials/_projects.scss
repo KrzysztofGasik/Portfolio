@@ -28,6 +28,7 @@
     font-size: 0.85em;
     line-height: 1.8em;
   }
+  
   .portfolio__container img {
     border-radius: 0.5em;
     margin-bottom: 1.5em;
@@ -44,7 +45,7 @@
 
   .portfolio__image__techstack {
     width: 100%;
-    height: calc(100% - 0.5em);
+    height: calc(100% - 2em);
     position: absolute;
     background: rgba(75, 75, 75, 0.85);
     border-radius: 0.5em;
@@ -97,13 +98,7 @@
   .portfolio__container .portfolio__left {
     display: grid;
     grid-template-columns: 40% 60%;
-  }
-  .portfolio__container:nth-child(1n) .portfolio__left {
     grid-template-areas: "portfolio-description portfolio-img";
-  }
-  .portfolio__container:nth-child(2n) .portfolio__left {
-    grid-template-areas: "portfolio-img portfolio-description";
-    grid-template-columns: 60% 40%;
   }
   .inner__container {
     display: grid;
@@ -127,5 +122,17 @@
 @media only screen and (min-width: 2000px) {
   .portfolio__container {
     padding: 0 25em;
+  }
+  
+  .portfolio{
+    .project__title{
+      font-size: 1em;
+    }
+    .project__link{
+      font-size: 1.45em;
+    }
+    .project__description{
+      font-size: 1em;
+    }
   }
 }

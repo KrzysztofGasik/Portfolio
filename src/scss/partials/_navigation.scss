@@ -40,12 +40,13 @@ header {
 .close__icon {
   position: fixed;
   cursor: pointer;
-  right: 1%;
-  top: 1%;
+  right: 0;
+  top:0;
   z-index: 3;
   opacity: 0;
   transition: all 0.5s ease;
   display: none;
+  padding: 1em;
   svg.fa-times-circle {
     color: $white;
     width: 2em;

@@ -10,7 +10,6 @@ export default function Skills() {
   useEffect(() => {
     const wrapper = skillWrapper.current;
     gsap.registerPlugin(ScrollTrigger);
-
     gsap.set(wrapper, { autoAlpha: 0 });
 
     const timeLine = gsap.timeline();

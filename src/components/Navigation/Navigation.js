@@ -27,7 +27,7 @@ function Navigation() {
     "Project",
     "Skills",
     "Projects",
-    "Contact",
+    // "Contact",
   ];
 
   const container = useRef(null);
