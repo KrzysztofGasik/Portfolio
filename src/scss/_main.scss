@@ -6,7 +6,6 @@
 // $navigationColorRgba: rgba(141, 30, 193, 0.9);
 // $descriptionColor: #3b3b3b;
 // $white: #fff;
-
 $mainColor: #2472ff;
 $mainColorDark: #105eff;
 $mainColorLight: #3886ff;
@@ -15,7 +14,6 @@ $navigationColor: #105eff;
 $navigationColorRgba: rgba(16, 94, 255, 0.9);
 $descriptionColor: #3b3b3b;
 $white: #fff;
-
 @import "partials/reset";
 @import "partials/fonts";
 @import "partials/navigation";
@@ -23,16 +21,20 @@ $white: #fff;
 @import "partials/featproj";
 @import "partials/skills";
 @import "partials/projects";
-
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
-  overflow-x: hidden;
 }
 
 section {
   padding: 4em 2em;
   text-align: center;
+}
+
+@media only screen and (min-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
 }
 
 @media only screen and (min-width: 1050px) {

@@ -15,6 +15,7 @@ export default function FeaturedProject() {
     gsap.set(leftColElements, { autoAlpha: 0 });
     gsap.set(rightColElements, { autoAlpha: 0 });
 
+
     const timeLine = gsap.timeline();
     timeLine.fromTo(
       leftColElements,
@@ -28,7 +29,7 @@ export default function FeaturedProject() {
           trigger: leftColElements,
           start: 'center center',
           end: 'bottom center',
-          scrub: true,
+          scrub: true
         },
       }
     ).fromTo(rightColElements,
@@ -44,7 +45,7 @@ export default function FeaturedProject() {
           end: 'bottom center',
           scrub: true
         },
-      })
+      });
   }, []);
 
   return (

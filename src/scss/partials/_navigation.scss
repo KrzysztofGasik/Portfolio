@@ -29,12 +29,13 @@ header {
 .hamburger__icon {
   position: absolute;
   cursor: pointer;
-  right: 5%;
+  right: 0%;
   top: 50%;
   -webkit-transform: translate(-5%, -50%);
   -ms-transform: translate(-5%, -50%);
   transform: translate(-5%, -50%);
   z-index: 2;
+  padding: 1em;
 }
 
 .close__icon {
@@ -69,14 +70,12 @@ header {
   width: 100%;
   clip-path: inset(0 0 0 100%);
   transition: clip-path 0.5s ease;
-  // pointer-events: none;
   z-index: 2;
   background: $navigationColor;
 }
 
 .navigation__links.open {
   clip-path: inset(0 0 0 0%);
-  // pointer-events: all;
   align-items: flex-start;
 }
 
@@ -167,7 +166,6 @@ header {
     width: auto;
     clip-path: none;
     transition: none;
-    // pointer-events: all;
     z-index: unset;
     justify-content: flex-end;
     li {

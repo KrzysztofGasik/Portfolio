@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
-// import { Tween } from "react-gsap";
 import gsap from "gsap";
 import Hamburger from "./Hamburger";
 import CloseIcon from "./CloseIcon";
@@ -30,22 +29,22 @@ function Navigation() {
     // "Contact",
   ];
 
+
   const container = useRef(null);
 
   useEffect(() => {
     const element = container.current;
-    gsap.set(element, { autoAlpha: 0 }); // ukrycie
+    gsap.set(element, { autoAlpha: 0 });
     const timeLine = gsap.timeline({ defaults: { ease: "power3.inOut" } });
     timeLine.fromTo(
       element,
-      { x: "-=1000" },
+      { x: "-=500" },
       { x: "0", autoAlpha: 1, duration: 1 }
     );
-  },[]);
+  }, []);
 
   return (
-    // <Tween from={{y: '-100px'}} to={{y: '0px'}}>
-    <div ref={container} className="navigation__container">
+    <div className="navigation__container" ref={container}>
       <header>
         <a href="https://www.linkedin.com/in/krzysztof-gasik">
           Krzysztof Gasik

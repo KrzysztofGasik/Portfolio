@@ -9,7 +9,6 @@ import cat from '../../images/cat.jpg';
 import pollen from '../../images/pollen.jpg';
 
 export default function Projects() {
-
   const projectDesc1 = useRef(null);
   const projectDesc2 = useRef(null);
   const projectDesc3 = useRef(null);
@@ -58,6 +57,8 @@ export default function Projects() {
   const stack = [faReact, faJs, faSass];
 
   useEffect(() => {
+    let isMobile = navigator.maxTouchPoints>0;
+    
     const portfolioProjDesc1 = projectDesc1.current;
     const portfolioProjDesc2 = projectDesc2.current;
     const portfolioProjDesc3 = projectDesc3.current;
@@ -83,9 +84,9 @@ export default function Projects() {
           ease: "Power2.easeInOut",
           scrollTrigger: {
             trigger: trigger,
-            start: "top center",
-            end: "bottom center",
-            scrub: true,
+            start: isMobile ? "top bottom" : "",
+            end: isMobile ? "bottom center" : "",
+            scrub: true
           },
         }
       );
@@ -102,22 +103,22 @@ export default function Projects() {
           ease: "Power2.easeInOut",
           scrollTrigger: {
             trigger: trigger,
-            start: "top center",
-            end: "bottom center",
-            scrub: true,
+            start: isMobile ? "top bottom" : "",
+            end: isMobile ? "bottom center" : "",
+            scrub: true
           },
         }
       );
     }
 
-    leftAnimation(portfolioProjDesc1);
-    leftAnimation(portfolioProjDesc2);
-    leftAnimation(portfolioProjDesc3);
+    leftAnimation(portfolioProjDesc1,document.querySelector(".skills"));
+    leftAnimation(portfolioProjDesc2,portfolioProjDesc1);
+    leftAnimation(portfolioProjDesc3,portfolioProjDesc2);
     leftAnimation(portfolioProjDesc4,portfolioProjDesc3);
-    rightAnimation(portfolioProjImg1);
-    rightAnimation(portfolioProjImg2);
-    rightAnimation(portfolioProjImg3);
-    rightAnimation(portfolioProjImg4,portfolioProjImg3);
+    rightAnimation(portfolioProjImg1,document.querySelector(".skills"));
+    rightAnimation(portfolioProjImg2,portfolioProjImg1);
+    rightAnimation(portfolioProjImg3,portfolioProjImg2);
+    rightAnimation(portfolioProjImg4,portfolioProjImg2);
 
   }, [])
 

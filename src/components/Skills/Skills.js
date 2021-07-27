@@ -8,6 +8,7 @@ export default function Skills() {
   const skillWrapper = useRef(null);
 
   useEffect(() => {
+
     const wrapper = skillWrapper.current;
     gsap.registerPlugin(ScrollTrigger);
     gsap.set(wrapper, { autoAlpha: 0 });
@@ -23,9 +24,9 @@ export default function Skills() {
         ease: "Power2.easeInOut",
         scrollTrigger: {
           trigger: wrapper,
-          start: "top center",
+          start: "top bottom",
           end: "bottom center",
-          scrub: true,
+          scrub: true
         },
       }
     );
@@ -43,7 +44,7 @@ export default function Skills() {
     {
       name: "CSS",
       icon: faCss3,
-    },
+    }
   ];
 
   return (
@@ -57,12 +58,12 @@ export default function Skills() {
                   <FontAwesomeIcon icon={skill.icon} className={skill.name} />
                 </div>
                 <p className="skill__title">{skill.name}</p>
-                <p className="skill__description">
+                {/* <p className="skill__description">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Dignissimos soluta natus iure aliquid fuga sunt illo, pariatur
                   quas labore, doloribus minima et omnis aliquam esse doloremque
                   veniam alias maiores. Qui.
-                </p>
+                </p> */}
               </li>
             );
           })}
