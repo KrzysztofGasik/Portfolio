@@ -36,14 +36,17 @@ export default function Skills() {
     {
       name: "React",
       icon: faReact,
+      description: 'Components Life Cycle, Class and Functional Components, Hooks, Redux'
     },
     {
       name: "JS",
       icon: faJs,
+      description: 'OOP, Functional Programming, Async/Await, ES6'
     },
     {
       name: "CSS",
       icon: faCss3,
+      description: 'HTML5, CSS3, RWD, SASS, BEM, Animations, GSAP'
     }
   ];
 
@@ -52,18 +55,16 @@ export default function Skills() {
       <div className="skills__container">
         <ul>
           {skillSet.map((skill) => {
+            const {name, icon, description} = skill;
             return (
-              <li key={skill.name}>
+              <li key={name}>
                 <div className="icon__container">
-                  <FontAwesomeIcon icon={skill.icon} className={skill.name} />
+                  <FontAwesomeIcon icon={icon} className={name} />
                 </div>
-                <p className="skill__title">{skill.name}</p>
-                {/* <p className="skill__description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dignissimos soluta natus iure aliquid fuga sunt illo, pariatur
-                  quas labore, doloribus minima et omnis aliquam esse doloremque
-                  veniam alias maiores. Qui.
-                </p> */}
+                <p className="skill__title">{name}</p>
+                <p className="skill__description">
+                  {description}
+                </p>
               </li>
             );
           })}

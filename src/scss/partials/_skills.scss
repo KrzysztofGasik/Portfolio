@@ -44,7 +44,7 @@
 
   .skills__container ul {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1em;
     padding: 0 1em;
   }

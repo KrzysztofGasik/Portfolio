@@ -58,7 +58,7 @@ export default function Projects() {
 
   useEffect(() => {
     let isMobile = navigator.maxTouchPoints>0;
-    
+
     const portfolioProjDesc1 = projectDesc1.current;
     const portfolioProjDesc2 = projectDesc2.current;
     const portfolioProjDesc3 = projectDesc3.current;
@@ -91,7 +91,7 @@ export default function Projects() {
         }
       );
     }
-    
+
     const leftAnimation = (element,trigger) => {
       if (trigger === undefined) trigger = element;
       const timeLine = gsap.timeline();
@@ -118,7 +118,7 @@ export default function Projects() {
     rightAnimation(portfolioProjImg1,document.querySelector(".skills"));
     rightAnimation(portfolioProjImg2,portfolioProjImg1);
     rightAnimation(portfolioProjImg3,portfolioProjImg2);
-    rightAnimation(portfolioProjImg4,portfolioProjImg2);
+    rightAnimation(portfolioProjImg4,portfolioProjImg3);
 
   }, [])
 
