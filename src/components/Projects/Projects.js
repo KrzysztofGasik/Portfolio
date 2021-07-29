@@ -86,7 +86,7 @@ export default function Projects() {
             trigger: trigger,
             start: isMobile ? "top bottom" : "",
             end: isMobile ? "bottom center" : "",
-            scrub: true
+            scrub: 1
           },
         }
       );
@@ -105,7 +105,7 @@ export default function Projects() {
             trigger: trigger,
             start: isMobile ? "top bottom" : "",
             end: isMobile ? "bottom center" : "",
-            scrub: true
+            scrub: 1
           },
         }
       );
@@ -196,7 +196,7 @@ export default function Projects() {
           </div>
         </div>
       </div>
-      <div className='portfolio__container'>
+      <div className='portfolio__container last'>
         <div className='portfolio__left'>
           <div className='inner__container' ref={projectDesc4}>
             <p className='project__title'>Pollen Alert</p>

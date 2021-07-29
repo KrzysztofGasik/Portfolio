@@ -23,10 +23,10 @@ export default function Skills() {
         duration: 1,
         ease: "Power2.easeInOut",
         scrollTrigger: {
-          trigger: wrapper,
+          trigger: '.skills',
           start: "top bottom",
-          end: "bottom center",
-          scrub: true
+          end: "+=500",
+          scrub: 1
         },
       }
     );

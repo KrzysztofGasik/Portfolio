@@ -8,12 +8,19 @@
 
 .portfolio {
   background: #f7f7f7;
+
   .project__title {
     text-transform: uppercase;
     font-weight: bold;
     color: $mainColorDark;
     letter-spacing: 0.3em;
     font-size: 0.85em;
+    border-top: 2px solid #4581fd;
+    padding-top: 1em;
+  }
+  .project__title:first-of-type {
+    border-top: none;
+    padding-top: 0;
   }
   .project__link a {
     color: #000;
@@ -28,7 +35,6 @@
     font-size: 0.85em;
     line-height: 1.8em;
   }
-  
   .portfolio__container img {
     border-radius: 0.5em;
     margin-bottom: 1.5em;
@@ -94,6 +100,14 @@
 @media only screen and (min-width: 800px) {
   .portfolio {
     padding: 5em;
+    .project__title {
+      border-top: none;
+      padding-top: 0;
+    }
+    .project__title:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
   }
   .portfolio__container .portfolio__left {
     display: grid;
@@ -114,8 +128,10 @@
 }
 
 @media only screen and (min-width: 1550px) {
-  .portfolio__container {
-    padding: 0 15em;
+  .portfolio {
+    .portfolio__container {
+      padding: 0 15em;
+    }
   }
 }
 
@@ -123,15 +139,15 @@
   .portfolio__container {
     padding: 0 25em;
   }
-  
-  .portfolio{
-    .project__title{
+
+  .portfolio {
+    .project__title {
       font-size: 1em;
     }
-    .project__link{
+    .project__link {
       font-size: 1.45em;
     }
-    .project__description{
+    .project__description {
       font-size: 1em;
     }
   }

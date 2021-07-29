@@ -120,9 +120,9 @@ header {
   opacity: 1;
 }
 
-.navigation__social__icons {
-  display: none;
-}
+// .navigation__social__icons {
+//   display: none;
+// }
 
 @media only screen and (min-width: 800px) {
   #Home {
@@ -155,7 +155,7 @@ header {
     }
   }
   .navigation__links + .close__icon,
-  .navigation__social__icons,
+  // .navigation__social__icons,
   .hamburger__icon,
   .close__icon {
     display: none;
@@ -189,41 +189,41 @@ header {
   header {
     padding: 2em 2em 2em 4em;
   }
-  .navigation__social__icons {
-    padding: 2em 4em 2em 0;
-    display: block;
-    ul {
-      display: flex;
-      justify-content: space-between;
-      width: 7em;
-      float: right;
-      .fa-github,
-      .fa-linkedin,
-      .fa-envelope {
-        width: 1.2em;
-        height: 1.2em;
-      }
-    }
-  }
-  .navigation__social__icons ul li a svg {
-    color: $descriptionColor;
-  }
+  // .navigation__social__icons {
+  //   padding: 2em 4em 2em 0;
+  //   display: block;
+  //   ul {
+  //     display: flex;
+  //     justify-content: space-between;
+  //     width: 7em;
+  //     float: right;
+  //     .fa-github,
+  //     .fa-linkedin,
+  //     .fa-envelope {
+  //       width: 1.2em;
+  //       height: 1.2em;
+  //     }
+  //   }
+  // }
+  // .navigation__social__icons ul li a svg {
+  //   color: $descriptionColor;
+  // }
 }
 
 @media only screen and (min-width: 1250px) {
   header {
     padding: 2em 2em 2em 10em;
   }
-  .navigation__social__icons {
-    padding: 2em 10em 2em 0;
-  }
+  // .navigation__social__icons {
+  //   padding: 2em 10em 2em 0;
+  // }
 }
 
 @media only screen and (min-width: 1550px) {
   header {
     padding: 2em 2em 2em 20em;
   }
-  .navigation__social__icons {
-    padding: 2em 20em 2em 0;
-  }
+  // .navigation__social__icons {
+  //   padding: 2em 20em 2em 0;
+  // }
 }

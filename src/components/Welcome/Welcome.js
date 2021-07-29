@@ -4,7 +4,6 @@ import { ReactComponent as WelcomeImage } from "../../images/welcome.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHandshake } from "@fortawesome/free-solid-svg-icons";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-// import welcomeGraphic from '../../images/react_js.png'
 
 export default function Welcome() {
   const welcomeWrapper = useRef(null);

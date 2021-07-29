@@ -28,8 +28,8 @@ export default function FeaturedProject() {
         scrollTrigger: {
           trigger: leftColElements,
           start: 'center center',
-          end: 'bottom center',
-          scrub: true
+          end: '+=300',
+          scrub: 1
         },
       }
     ).fromTo(rightColElements,
@@ -42,8 +42,8 @@ export default function FeaturedProject() {
         scrollTrigger: {
           trigger: rightColElements,
           start: 'center center',
-          end: 'bottom center',
-          scrub: true
+          end: '+=300',
+          scrub: 1
         },
       });
   }, []);

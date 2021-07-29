@@ -1,0 +1,29 @@
+.footer{
+    background: $mainColorLighter;
+    padding: 2em;
+    .social__wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .navigation__social__icons {
+            padding: 2em 4em 2em 0;
+            display: block;
+            ul {
+              display: flex;
+              justify-content: space-evenly;
+              width: 10em;
+              .fa-github,
+              .fa-linkedin,
+              .fa-envelope {
+                width: 1.5em;
+                height: 1.5em;
+              }
+              li a {
+                  color: $white;
+              }
+            }
+          }
+    }
+}
+
+

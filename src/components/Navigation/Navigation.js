@@ -3,7 +3,6 @@ import { Link } from "react-scroll";
 import gsap from "gsap";
 import Hamburger from "./Hamburger";
 import CloseIcon from "./CloseIcon";
-import SocialIcons from "./SocialIcons";
 
 function Navigation() {
   const [toggle, setSwitch] = useState(false);
@@ -26,7 +25,7 @@ function Navigation() {
     "Project",
     "Skills",
     "Projects",
-    // "Contact",
+    "Contact",
   ];
 
 
@@ -73,9 +72,8 @@ function Navigation() {
           <CloseIcon onClick={switchMenu} />
         </nav>
       </header>
-      <SocialIcons />
+      {/* <SocialIcons /> */}
     </div>
-    // </Tween>
   );
 }
 
