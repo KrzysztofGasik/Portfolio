@@ -77,7 +77,7 @@ export default function Contact() {
             ease: "Sine.easeOut",
             stagger: 0.5,
           }
-        );
+        ).delay(2);
     };
   }, []);
 

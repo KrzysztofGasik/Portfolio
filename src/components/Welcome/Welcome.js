@@ -10,6 +10,10 @@ export default function Welcome() {
   const imageWrapper = useRef(null);
 
   useEffect(() => {
+
+    const isMobile = navigator.maxTouchPoints>0;
+    const containerOffsetVal = isMobile ? 5 : 200;
+
     const containerElement = welcomeWrapper.current;
     const [imageElements] = imageWrapper.current.children;
     const reactLogo = imageElements.getElementById("React");
@@ -19,7 +23,7 @@ export default function Welcome() {
     gsap.set([reactLogo, jsLogo], { autoAlpha: 0 });
 
     const timeLine = gsap.timeline();
-    timeLine.fromTo(containerElement,{ x: "+=1000" },{ x: "0", autoAlpha: 1, duration: 1 },"+=1")
+    timeLine.fromTo(containerElement,{ x: `+=${containerOffsetVal}`},{ x: "0", autoAlpha: 1, duration: 1 },"+=1")
             .fromTo(reactLogo,{y:"-=500"},{y: "0", autoAlpha: 1, ease: 'Sine.easeOut'})
             .fromTo(jsLogo,{y:"+=500"},{y: "0", autoAlpha: 1, ease: 'Sine.easeOut'});
   },[]);

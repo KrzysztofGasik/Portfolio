@@ -1,29 +1,54 @@
-.footer{
-    background: $mainColorLighter;
-    padding: 2em;
-    .social__wrapper {
+.footer {
+  background: $mainColorLighter;
+  padding: 2em;
+  .social__wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .navigation__social__icons {
+      ul {
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        .navigation__social__icons {
-            padding: 2em 4em 2em 0;
-            display: block;
-            ul {
-              display: flex;
-              justify-content: space-evenly;
-              width: 10em;
-              .fa-github,
-              .fa-linkedin,
-              .fa-envelope {
-                width: 1.5em;
-                height: 1.5em;
-              }
-              li a {
-                  color: $white;
-              }
-            }
+        flex-flow: column wrap;
+        .fa-github,
+        .fa-linkedin,
+        .fa-envelope {
+          width: 2em;
+          height: 2em;
+          margin: 1em;
+        }
+        li a {
+          color: $white;
+          &:hover {
+            color: $descriptionColor;
           }
+        }
+      }
     }
+  }
 }
 
+@media screen and (max-width: 460px) {
+  .footer {
+    .social__wrapper {
+      flex-flow: column wrap;
+      .navigation__social__icons {
+        ul {
+          margin: 1em 0 1em 0;
+          flex-flow: row wrap;
+        }
+      }
+    }
+  }
+}
 
+@media screen and (min-width: 800px) {
+  .footer {
+    .social__wrapper {
+      .navigation__social__icons {
+        ul {
+          flex-flow: row wrap;
+        }
+      }
+    }
+  }
+}
