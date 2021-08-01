@@ -1,44 +1,42 @@
 .welcome__wrapper {
-  color: #fff;
+  color: $white;
   display: grid;
   text-align: center;
-  .column__left {
+  .welcome__leftSide {
     background: $mainColor;
     padding: 4em;
     svg:last-child {
       animation: bounce 2s ease-in-out infinite;
     }
   }
-  .column__right {
+  .welcome__rightSide {
     display: none;
   }
-}
-
-.get__in__touch {
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  width: 200px;
-  font-weight: bold;
-  svg.handshake {
-    display: block;
-    margin-right: 1em;
-    height: 2em;
-    width: 2em;
+  .welcome__getInTouch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    svg.handshake {
+      display: block;
+      margin-right: 1em;
+      height: 2em;
+      width: 2em;
+    }
   }
-}
 
-svg.scroll {
-  width: 30px !important;
-  height: 30px;
-  margin-top: 2em;
+  svg.welcome__handshakeIcon {
+    width: 30px !important;
+    height: 30px;
+    margin-top: 2em;
+  }
 }
 
 @media only screen and (min-width: 800px) {
   .welcome__wrapper {
     text-align: center;
     padding: 0;
-    .column__left {
+    .welcome__leftSide {
       padding: 4em;
     }
   }
@@ -52,7 +50,7 @@ svg.scroll {
     grid-template-columns: 66% auto;
     background: unset;
     padding: 0;
-    .column__left {
+    .welcome__leftSide {
       background: $mainColor;
       padding: 6em 8em 6em 4em;
       text-align: left;
@@ -60,13 +58,13 @@ svg.scroll {
         font-size: 3em;
         line-height: 1.2em;
       }
-      .get__in__touch {
-        margin: unset;
+      .welcome__getInTouch {
+        margin: 1em 0;
+        justify-content: flex-start;
       }
     }
-    .column__right {
+    .welcome__rightSide {
       display: block;
-      // margin: 15% 0 0 -50%;
       margin: 5% 0 0 -50%;
       width: 100%;
     }
@@ -75,7 +73,7 @@ svg.scroll {
 
 @media only screen and (min-width: 1250px) {
   .welcome__wrapper {
-    .column__left {
+    .welcome__leftSide {
       padding: 6em 8em 6em 10em;
     }
   }
@@ -83,7 +81,7 @@ svg.scroll {
 
 @media only screen and (min-width: 1550px) {
   .welcome__wrapper {
-    .column__left {
+    .welcome__leftSide {
       padding: 9em 20em 6em 20em;
     }
   }

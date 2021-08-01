@@ -1,24 +1,24 @@
-// $mainColor: #9c30cf;
-// $mainColorDark: #8614b9;
-// $mainColorLight: #b247e5;
-// $mainColorLighter: #d69df1;
-// $navigationColor: #8d1ec1;
-// $navigationColorRgba: rgba(141, 30, 193, 0.9);
-// $descriptionColor: #3b3b3b;
-// $white: #fff;
 $mainColor: #2472ff;
 $mainColorDark: #105eff;
 $mainColorLight: #3886ff;
 $mainColorLighter: #4c9aff;
-$navigationColor: #105eff;
-$navigationColorRgba: rgba(16, 94, 255, 0.9);
 $descriptionColor: #3b3b3b;
 $white: #fff;
+$gold: #ffd700;
+
+
+$mainColorThemeDark: #1f242a;
+$mainColorDarkThemeDark: #090b0d;
+$mainColorLightThemeDark: #2a3139;
+$mainColorLighterThemeDark: #353d47;
+$descriptionColorThemeDark: #6c6c6c;
+
+@import "modules/themes";
 @import "partials/reset";
 @import "partials/fonts";
 @import "partials/navigation";
 @import "partials/welcome";
-@import "partials/featproj";
+@import "partials/lastproj";
 @import "partials/skills";
 @import "partials/projects";
 @import "partials/contact";

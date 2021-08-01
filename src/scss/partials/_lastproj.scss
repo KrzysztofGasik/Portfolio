@@ -1,19 +1,18 @@
-.featured__project {
+.last__project {
   position: relative;
-  margin-top: 6em;
+  // margin-top: 6em;
 }
 
-.featured__project::before {
+.last__project::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
-  width: 200px;
-  height: 200px;
-  // border-radius: 50%;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  width: 250px;
+  height: 250px;
   background: $mainColorLighter;
-  z-index: -1;
+  z-index: 0;
 }
 
 .project__title {
@@ -40,18 +39,18 @@
 }
 
 @media only screen and (min-width: 800px) {
-  .featured__project {
+  .last__project {
     display: grid;
     grid-template-columns: 40% auto;
   }
-  .featured__project .column__left {
+  .last__project .column__left {
     display: grid;
     place-content: center;
   }
-  .featured__project .column__right {
+  .last__project .column__right {
     margin: 1em 0 0 2em;
   }
-  .featured__project .inner__container {
+  .last__project .project__container {
     text-align: left;
   }
 }

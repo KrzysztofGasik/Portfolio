@@ -5,7 +5,7 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 export default function SocialIcons() {
     return (
-        <div className="navigation__social__icons">
+        <div className="navigation__socialIcons">
         <ul>
           <li>
             <a href="https://github.com/KrzGas">

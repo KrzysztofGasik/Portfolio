@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import projectImg from "../../images/tvpuls.jpg";
 
-export default function FeaturedProject() {
+export default function LastProject() {
   const leftCol = useRef(null);
   const rightCol = useRef(null);
 
@@ -54,9 +54,9 @@ export default function FeaturedProject() {
   }, []);
 
   return (
-    <section className="featured__project" id="Project">
+    <section className="last__project" id="Last project">
       <div className="column__left" ref={leftCol}>
-        <div className="inner__container">
+        <div className="project__container">
           <p className="project__title">Featured Project</p>
           <a href="https://tvpuls.pl" className="project__link">
             tvpuls.pl
@@ -67,7 +67,9 @@ export default function FeaturedProject() {
           </p>
         </div>
       </div>
-      <img src={projectImg} alt="" className="column__right" ref={rightCol} />
+      <div className="column__right" ref={rightCol}>
+        <img src={projectImg} alt="" />
+      </div>
     </section>
   );
 }

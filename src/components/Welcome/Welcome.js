@@ -10,8 +10,7 @@ export default function Welcome() {
   const imageWrapper = useRef(null);
 
   useEffect(() => {
-
-    const isMobile = navigator.maxTouchPoints>0;
+    const isMobile = navigator.maxTouchPoints > 0;
     const containerOffsetVal = isMobile ? 5 : 200;
 
     const containerElement = welcomeWrapper.current;
@@ -23,22 +22,39 @@ export default function Welcome() {
     gsap.set([reactLogo, jsLogo], { autoAlpha: 0 });
 
     const timeLine = gsap.timeline();
-    timeLine.fromTo(containerElement,{ x: `+=${containerOffsetVal}`},{ x: "0", autoAlpha: 1, duration: 1 },"+=1")
-            .fromTo(reactLogo,{y:"-=500"},{y: "0", autoAlpha: 1, ease: 'Sine.easeOut'})
-            .fromTo(jsLogo,{y:"+=500"},{y: "0", autoAlpha: 1, ease: 'Sine.easeOut'});
-  },[]);
+    timeLine
+      .fromTo(
+        containerElement,
+        { x: `+=${containerOffsetVal}` },
+        { x: "0", autoAlpha: 1, duration: 1 },
+        "+=1"
+      )
+      .fromTo(
+        reactLogo,
+        { y: "-=500" },
+        { y: "0", autoAlpha: 1, ease: "Sine.easeOut" }
+      )
+      .fromTo(
+        jsLogo,
+        { y: "+=500" },
+        { y: "0", autoAlpha: 1, ease: "Sine.easeOut" }
+      );
+  }, []);
 
   return (
     <div className="welcome__wrapper" id="Home" ref={welcomeWrapper}>
-      <div className="column__left">
+      <div className="welcome__leftSide">
         <h1>I'm bringing your designs to reality</h1>
-        <div className="get__in__touch">
+        <div className="welcome__getInTouch">
           <FontAwesomeIcon icon={faHandshake} className="handshake" />
-          <p>Let's meet</p>
+          <p>Let's get to know each other</p>
         </div>
-        <FontAwesomeIcon className="scroll" icon={faArrowDown} />
+        <FontAwesomeIcon
+          className="welcome__handshakeIcon"
+          icon={faArrowDown}
+        />
       </div>
-      <div className="column__right" ref={imageWrapper}>
+      <div className="welcome__rightSide" ref={imageWrapper}>
         <WelcomeImage className="welcome__image" />
       </div>
     </div>

@@ -8,7 +8,6 @@ export default function Skills() {
   const skillWrapper = useRef(null);
 
   useEffect(() => {
-
     const wrapper = skillWrapper.current;
     gsap.registerPlugin(ScrollTrigger);
     gsap.set(wrapper, { autoAlpha: 0 });
@@ -23,10 +22,10 @@ export default function Skills() {
         duration: 1,
         ease: "Power2.easeInOut",
         scrollTrigger: {
-          trigger: '.skills',
+          trigger: ".skills",
           start: "top bottom",
           end: "+=500",
-          scrub: 1
+          scrub: 1,
         },
       }
     );
@@ -36,18 +35,19 @@ export default function Skills() {
     {
       name: "React",
       icon: faReact,
-      description: 'Components Life Cycle, Class and Functional Components, Hooks, Redux'
+      description:
+        "Components Life Cycle, Class and Functional Components, Hooks, Redux",
     },
     {
       name: "JS",
       icon: faJs,
-      description: 'OOP, Functional Programming, Async/Await, ES6'
+      description: "OOP, Functional Programming, Async/Await, ES6",
     },
     {
       name: "CSS",
       icon: faCss3,
-      description: 'HTML5, CSS3, RWD, SASS, BEM, Animations, GSAP'
-    }
+      description: "HTML5, CSS3, RWD, SASS, BEM, Animations, GSAP",
+    },
   ];
 
   return (
@@ -55,16 +55,14 @@ export default function Skills() {
       <div className="skills__container">
         <ul>
           {skillSet.map((skill) => {
-            const {name, icon, description} = skill;
+            const { name, icon, description } = skill;
             return (
               <li key={name}>
-                <div className="icon__container">
+                <div className="skill__icon">
                   <FontAwesomeIcon icon={icon} className={name} />
                 </div>
                 <p className="skill__title">{name}</p>
-                <p className="skill__description">
-                  {description}
-                </p>
+                <p className="skill__description">{description}</p>
               </li>
             );
           })}

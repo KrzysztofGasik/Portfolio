@@ -25,7 +25,7 @@ export default function Contact() {
     const timeLine = gsap.timeline();
 
     const startAnimation = () => {
-      const last = document.querySelector(".portfolio__container.last");
+      const last = document.querySelector(".project__container.last");
       if (window.scrollY > last.offsetTop) {
         runAnimation();
         document.removeEventListener("scroll", startAnimation);

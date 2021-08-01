@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 import gsap from "gsap";
 import Hamburger from "./Hamburger";
 import CloseIcon from "./CloseIcon";
+import DarkMode from "./DarkMode";
 
 function Navigation() {
   const [toggle, setSwitch] = useState(false);
@@ -22,7 +23,7 @@ function Navigation() {
 
   const navigationElements = [
     "Home",
-    "Project",
+    "Last project",
     "Skills",
     "Projects",
     "Contact",
@@ -51,7 +52,7 @@ function Navigation() {
         <Hamburger onClick={switchMenu} />
         <nav>
           <ul
-            className={toggle ? "open navigation__links" : "navigation__links"}
+            className={toggle ? "navigation__links navigation__links--open" : "navigation__links"}
           >
             {navigationElements.map((element) => {
               return (
@@ -68,11 +69,12 @@ function Navigation() {
                 </li>
               );
             })}
+            <DarkMode />
           </ul>
           <CloseIcon onClick={switchMenu} />
         </nav>
       </header>
-      {/* <SocialIcons /> */}
+      {/* <DarkMode /> */}
     </div>
   );
 }

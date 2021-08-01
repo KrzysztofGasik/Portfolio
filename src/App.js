@@ -1,6 +1,6 @@
 import Navigation from "./components/Navigation/Navigation";
 import Welcome from "./components/Welcome/Welcome";
-import FeaturedProject from "./components/FeaturedProject/FeaturedProject";
+import LastProject from "./components/LastProject/LastProject";
 import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Navigation />
       <Welcome />
-      <FeaturedProject />
+      <LastProject />
       <Skills />
       <Projects />
       <Contact />

@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    .navigation__social__icons {
+    .navigation__socialIcons {
       ul {
         display: flex;
         flex-flow: column wrap;
@@ -30,8 +30,8 @@
 @media screen and (max-width: 460px) {
   .footer {
     .social__wrapper {
-      flex-flow: column wrap;
-      .navigation__social__icons {
+      flex-flow: column wrap; 
+      .navigation__socialIcons {
         ul {
           margin: 1em 0 1em 0;
           flex-flow: row wrap;

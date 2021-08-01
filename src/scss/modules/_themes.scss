@@ -1,0 +1,86 @@
+.theme__dark {
+  transition: all 1s ease;
+  // Navigation
+  .navigation__container header {
+    background: $mainColorDarkThemeDark;
+  }
+  .navigation__links {
+    background: $mainColorDarkThemeDark;
+  }
+
+  .darkmode__wrapper {
+    .darkmode__button {
+      background-color: $descriptionColorThemeDark;
+    }
+  }
+
+  // Welcome
+  .welcome__wrapper {
+    color: $white;
+    .welcome__leftSide {
+      background: $mainColorThemeDark;
+    }
+  }
+
+  // Last Project
+
+  .last__project {
+    background: $mainColorLightThemeDark;
+  }
+
+  .last__project::before {
+    background: rgba(255,255,255, 0.3);
+  }
+  .project__title,
+  .project__link,
+  .project__description {
+    color: $white;
+  }
+
+  
+  // Skills
+  .skills {
+    background: $mainColorLightThemeDark;
+  }
+  // Projects
+  .projects {
+    background: $descriptionColorThemeDark;
+    .project__container:not(:first-of-type) {
+      border-top: 2px solid $white;
+      padding-top: 1em;
+    }
+    .project__title {
+      color: $white;
+    }
+    .project__link a {
+      color: $white;
+    }
+    .project__description {
+      color: $white;
+    }
+    .project__imageTechstack {
+      height: calc(100% - 1.9em);
+      background: rgba(108, 108, 108, 0.85);
+      p {
+        color: $white;
+        font-size: 2em;
+      }
+    }
+  }
+  // Contact
+  .footer {
+    background: $descriptionColorThemeDark;
+    .social__wrapper {
+      .navigation__socialIcons {
+        ul {
+          li a {
+            color: $white;
+            &:hover {
+              color: $descriptionColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
