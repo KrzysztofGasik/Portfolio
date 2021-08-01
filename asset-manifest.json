@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.605ff6bc.chunk.css",
-    "main.js": "/Portfolio/static/js/main.8977e40c.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.8977e40c.chunk.js.map",
+    "main.css": "/Portfolio/static/css/main.7a41ef11.chunk.css",
+    "main.js": "/Portfolio/static/js/main.7bf46b6e.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.7bf46b6e.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.99387300.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.99387300.js.map",
-    "static/js/2.e1ddab68.chunk.js": "/Portfolio/static/js/2.e1ddab68.chunk.js",
-    "static/js/2.e1ddab68.chunk.js.map": "/Portfolio/static/js/2.e1ddab68.chunk.js.map",
+    "static/js/2.5d668fa2.chunk.js": "/Portfolio/static/js/2.5d668fa2.chunk.js",
+    "static/js/2.5d668fa2.chunk.js.map": "/Portfolio/static/js/2.5d668fa2.chunk.js.map",
     "static/js/3.e08fbef5.chunk.js": "/Portfolio/static/js/3.e08fbef5.chunk.js",
     "static/js/3.e08fbef5.chunk.js.map": "/Portfolio/static/js/3.e08fbef5.chunk.js.map",
     "index.html": "/Portfolio/index.html",
-    "static/css/main.605ff6bc.chunk.css.map": "/Portfolio/static/css/main.605ff6bc.chunk.css.map",
-    "static/js/2.e1ddab68.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.e1ddab68.chunk.js.LICENSE.txt",
+    "static/css/main.7a41ef11.chunk.css.map": "/Portfolio/static/css/main.7a41ef11.chunk.css.map",
+    "static/js/2.5d668fa2.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.5d668fa2.chunk.js.LICENSE.txt",
     "static/media/cat.54cb81f4.jpg": "/Portfolio/static/media/cat.54cb81f4.jpg",
     "static/media/note.d62818a7.jpg": "/Portfolio/static/media/note.d62818a7.jpg",
     "static/media/pollen.440c01fe.jpg": "/Portfolio/static/media/pollen.440c01fe.jpg",
-    "static/media/social.de82c317.svg": "/Portfolio/static/media/social.de82c317.svg",
+    "static/media/social.c4568656.svg": "/Portfolio/static/media/social.c4568656.svg",
     "static/media/things.44b53e99.jpg": "/Portfolio/static/media/things.44b53e99.jpg",
     "static/media/tvpuls.20651a86.jpg": "/Portfolio/static/media/tvpuls.20651a86.jpg",
     "static/media/welcome.a41761be.svg": "/Portfolio/static/media/welcome.a41761be.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.99387300.js",
-    "static/js/2.e1ddab68.chunk.js",
-    "static/css/main.605ff6bc.chunk.css",
-    "static/js/main.8977e40c.chunk.js"
+    "static/js/2.5d668fa2.chunk.js",
+    "static/css/main.7a41ef11.chunk.css",
+    "static/js/main.7bf46b6e.chunk.js"
   ]
 }
