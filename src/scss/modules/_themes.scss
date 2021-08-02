@@ -29,7 +29,7 @@
   }
 
   .last__project::before {
-    background: rgba(255,255,255, 0.3);
+    background: rgba(255, 255, 255, 0.3);
   }
   .project__title,
   .project__link,
@@ -37,7 +37,14 @@
     color: $white;
   }
 
-  
+  .projects {
+    .project__link:hover .project__linkIcon,
+    .project__link:hover a {
+      cursor: pointer;
+      color: $mainColorDarkThemeDark;
+    }
+  }
+
   // Skills
   .skills {
     background: $mainColorLightThemeDark;

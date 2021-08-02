@@ -57,7 +57,7 @@ export default function LastProject() {
     <section className="last__project" id="Last project">
       <div className="column__left" ref={leftCol}>
         <div className="project__container">
-          <p className="project__title">Featured Project</p>
+          <p className="project__title">Last Project</p>
           <a href="https://tvpuls.pl" className="project__link">
             tvpuls.pl
           </a>

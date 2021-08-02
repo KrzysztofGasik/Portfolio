@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faReact, faJs, faSass } from "@fortawesome/free-brands-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 import note from "../../images/note.jpg";
 import things from "../../images/things.jpg";
 import cat from "../../images/cat.jpg";
@@ -148,6 +149,7 @@ export default function Projects() {
             <p className="project__link">
               <a href="https://krzgas.github.io/LetMeOrganizeYourDay">
                 Let me organize your day
+                <FontAwesomeIcon icon={faLink} className="project__linkIcon" />
               </a>
             </p>
             <p className="project__description">
@@ -172,7 +174,10 @@ export default function Projects() {
           <div className="project__detailsWrapper" ref={projectDesc2}>
             <p className="project__title">Oddam Rzeczy</p>
             <p className="project__link">
-              <a href="https://krzgas.github.io/Oddam-Rzeczy">Oddam Rzeczy</a>
+              <a href="https://krzgas.github.io/Oddam-Rzeczy">
+                Oddam Rzeczy{" "}
+                <FontAwesomeIcon icon={faLink} className="project__linkIcon" />
+              </a>
             </p>
             <p className="project__description">
               Check your wardrobe and attic. Do you have any spare clothes and
@@ -198,7 +203,10 @@ export default function Projects() {
           <div className="project__detailsWrapper" ref={projectDesc3}>
             <p className="project__title">Catopedia</p>
             <p className="project__link">
-              <a href="https://krzgas.github.io/Catopedia">Catopedia</a>
+              <a href="https://krzgas.github.io/Catopedia">
+                Catopedia{" "}
+                <FontAwesomeIcon icon={faLink} className="project__linkIcon" />
+              </a>
             </p>
             <p className="project__description">
               Do you love cats? If yes, this app is for you.
@@ -222,7 +230,10 @@ export default function Projects() {
           <div className="project__detailsWrapper" ref={projectDesc4}>
             <p className="project__title">Pollen Alert</p>
             <p className="project__link">
-              <a href="https://krzgas.github.io/PollenAlert">Pollen Alert</a>
+              <a href="https://krzgas.github.io/PollenAlert">
+                Pollen Alert{" "}
+                <FontAwesomeIcon icon={faLink} className="project__linkIcon" />
+              </a>
             </p>
             <p className="project__description">
               Are you allergic to pollen and have allergy to grass and other

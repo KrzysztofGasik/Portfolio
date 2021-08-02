@@ -21,6 +21,17 @@
     letter-spacing: 0.3em;
     font-size: 0.85em;
   }
+
+  .project__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .project__linkIcon {
+      width: 1.2em;
+      height: 1.2em;
+      margin: 0.4em 0 0 1em;
+    }
+  }
   .project__link a {
     color: #000;
     font-weight: bold;
@@ -28,6 +39,13 @@
     margin-top: 0.4em;
     display: block;
   }
+
+  .project__link:hover .project__linkIcon,
+  .project__link:hover a {
+    cursor: pointer;
+    color: $mainColorDark;
+  }
+
   .project__description {
     color: $descriptionColor;
     margin-bottom: 3em;
