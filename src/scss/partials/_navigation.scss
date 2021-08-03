@@ -29,7 +29,6 @@ header {
 
 .hamburger__icon {
   position: absolute;
-  cursor: pointer;
   right: 0%;
   top: 50%;
   -webkit-transform: translate(-5%, -50%);
@@ -37,6 +36,24 @@ header {
   transform: translate(-5%, -50%);
   z-index: 2;
   padding: 1em;
+  .line {
+    width: 30px;
+    height: 3px;
+    background: $white;
+    margin: 5px;
+    transition: all .2s linear;
+  }
+  &:hover {
+    cursor: pointer;
+    .line:nth-child(odd) {
+      width: 25px;
+      margin-left: auto;
+    }
+    .line:nth-child(even) {
+      width: 25px;
+      margin-right: auto;
+    }
+  }
 }
 
 .close__icon {
@@ -53,14 +70,11 @@ header {
     color: $white;
     width: 2em;
     height: 2em;
+    transition: all .3s linear;
+    &:hover {
+      animation: roll 2s linear infinite;
+    }
   }
-}
-
-.line {
-  width: 30px;
-  height: 3px;
-  background: $white;
-  margin: 5px;
 }
 
 .navigation__links {
@@ -81,11 +95,11 @@ header {
   align-items: flex-start;
 }
 
-.navigation__links.navigation__links--open + .darkmode__wrapper {
+.navigation__links.navigation__links--open+.darkmode__wrapper {
   position: absolute;
 }
 
-.navigation__links.navigation__links--open + .close__icon {
+.navigation__links.navigation__links--open+.close__icon {
   display: block;
 }
 
@@ -126,7 +140,7 @@ header {
   transition: all 0.5s ease 1s;
 }
 
-.navigation__links.navigation__links--open + .close__icon {
+.navigation__links.navigation__links--open+.close__icon {
   opacity: 1;
 }
 
@@ -175,11 +189,16 @@ header {
   }
 }
 
+@keyframes roll {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media only screen and (min-width: 800px) {
   #Home {
     margin-top: 0em;
   }
-
   .navigation__container {
     background: $mainColorDark;
     position: static;
@@ -205,7 +224,7 @@ header {
       }
     }
   }
-  .navigation__links + .close__icon,
+  .navigation__links+.close__icon,
   .hamburger__icon,
   .close__icon {
     display: none;
