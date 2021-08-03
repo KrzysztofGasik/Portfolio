@@ -2,8 +2,8 @@ import { React, useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faReact, faJs, faSass } from "@fortawesome/free-brands-svg-icons";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { faReact, faJs, faSass, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import note from "../../images/note.jpg";
 import things from "../../images/things.jpg";
 import cat from "../../images/cat.jpg";
@@ -148,8 +148,13 @@ export default function Projects() {
             <p className="project__title">Let me organize your day</p>
             <p className="project__link">
               <a href="https://krzgas.github.io/LetMeOrganizeYourDay">
-                Let me organize your day
-                <FontAwesomeIcon icon={faLink} className="project__linkIcon" />
+               View project on
+                <FontAwesomeIcon icon={faGlobe} className="project__linkIcon" />
+              </a>
+            </p>
+            <p className="project__repo">
+              <a href="https://github.com/KrzGas/LetMeOrganizeYourDay">
+                View repository on <FontAwesomeIcon icon={faGithub} className="project__ghIcon"/>
               </a>
             </p>
             <p className="project__description">
@@ -175,8 +180,13 @@ export default function Projects() {
             <p className="project__title">Oddam Rzeczy</p>
             <p className="project__link">
               <a href="https://krzgas.github.io/Oddam-Rzeczy">
-                Oddam Rzeczy{" "}
-                <FontAwesomeIcon icon={faLink} className="project__linkIcon" />
+               View project on
+                <FontAwesomeIcon icon={faGlobe} className="project__linkIcon" />
+              </a>
+            </p>
+            <p className="project__repo">
+              <a href="https://github.com/KrzGas/Oddam-Rzeczy">
+                View repository on <FontAwesomeIcon icon={faGithub} className="project__ghIcon"/>
               </a>
             </p>
             <p className="project__description">
@@ -204,8 +214,13 @@ export default function Projects() {
             <p className="project__title">Catopedia</p>
             <p className="project__link">
               <a href="https://krzgas.github.io/Catopedia">
-                Catopedia{" "}
-                <FontAwesomeIcon icon={faLink} className="project__linkIcon" />
+                View project on
+                <FontAwesomeIcon icon={faGlobe} className="project__linkIcon" />
+              </a>
+            </p>
+            <p className="project__repo">
+              <a href="https://github.com/KrzGas/Catopedia">
+                View repository on <FontAwesomeIcon icon={faGithub} className="project__ghIcon"/>
               </a>
             </p>
             <p className="project__description">
@@ -231,8 +246,13 @@ export default function Projects() {
             <p className="project__title">Pollen Alert</p>
             <p className="project__link">
               <a href="https://krzgas.github.io/PollenAlert">
-                Pollen Alert{" "}
-                <FontAwesomeIcon icon={faLink} className="project__linkIcon" />
+                View project on
+                <FontAwesomeIcon icon={faGlobe} className="project__linkIcon" />
+              </a>
+            </p>
+            <p className="project__repo">
+              <a href="https://github.com/KrzGas/PollenAlert">
+                View repository on <FontAwesomeIcon icon={faGithub} className="project__ghIcon"/>
               </a>
             </p>
             <p className="project__description">

@@ -57,11 +57,11 @@ export default function LastProject() {
     <section className="last__project" id="Last project">
       <div className="column__left" ref={leftCol}>
         <div className="project__container">
-          <p className="project__title">Last Project</p>
-          <a href="https://tvpuls.pl" className="project__link">
+          <p className="lastProject__title">Last Project</p>
+          <a href="https://tvpuls.pl" className="lastProject__link">
             tvpuls.pl
           </a>
-          <p className="project__description">
+          <p className="lastProject__description">
             New version of website, custom theme using lazy loading, owl
             carousel, css grid and flexbox.
           </p>

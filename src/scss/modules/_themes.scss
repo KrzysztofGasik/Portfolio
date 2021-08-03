@@ -7,13 +7,11 @@
   .navigation__links {
     background: $mainColorDarkThemeDark;
   }
-
   .darkmode__wrapper {
     .darkmode__button {
       background-color: $descriptionColorThemeDark;
     }
   }
-
   // Welcome
   .welcome__wrapper {
     color: $white;
@@ -21,30 +19,18 @@
       background: $mainColorThemeDark;
     }
   }
-
   // Last Project
-
   .last__project {
     background: $mainColorLightThemeDark;
   }
-
   .last__project::before {
     background: rgba(255, 255, 255, 0.3);
   }
-  .project__title,
-  .project__link,
-  .project__description {
+  .lastProject__title,
+  .lastProject__link,
+  .lastProject__description {
     color: $white;
   }
-
-  .projects {
-    .project__link:hover .project__linkIcon,
-    .project__link:hover a {
-      cursor: pointer;
-      color: $mainColorDarkThemeDark;
-    }
-  }
-
   // Skills
   .skills {
     background: $mainColorLightThemeDark;
@@ -57,10 +43,19 @@
       padding-top: 1em;
     }
     .project__title {
-      color: $white;
+      color: $mainColorDarkThemeDark;
     }
-    .project__link a {
-      color: $white;
+    .project__link,
+    .project__repo {
+      a {
+        color: $white;
+      }
+      &:hover .project_linkIcon,
+      &:hover .project__ghIcon,
+      &:hover a {
+        cursor: pointer;
+        color: $mainColorDarkThemeDark;
+      }
     }
     .project__description {
       color: $white;

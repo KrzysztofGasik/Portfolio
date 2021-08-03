@@ -10,7 +10,6 @@ export default function DarkMode() {
     document.body.classList.toggle('theme__dark');
   };
 
-  console.log(toggle);
   return (
     <div className="darkmode__wrapper">
       <div

@@ -15,7 +15,7 @@
   z-index: 0;
 }
 
-.project__title {
+.lastProject__title {
   text-transform: uppercase;
   font-weight: bold;
   color: $mainColorDark;
@@ -23,7 +23,7 @@
   font-size: 0.85em;
 }
 
-.project__link {
+.lastProject__link {
   color: #000;
   font-weight: bold;
   font-size: 1.3em;
@@ -31,7 +31,7 @@
   display: block;
 }
 
-.project__description {
+.lastProject__description {
   color: $descriptionColor;
   margin-bottom: 3em;
   font-size: 0.85em;
