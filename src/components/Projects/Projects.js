@@ -22,7 +22,7 @@ export default function Projects() {
   // const projects = [
   //   {
   //     name: 'Let me organize your day',
-  //     url: 'https://krzgas.github.io/LetMeOrganizeYourDay',
+  //     url: 'https://krzysztofgasik.github.io/LetMeOrganizeYourDay',
   //     description: 'This was my first app which help me organize my day',
   //     image: note,
   //     repo: 'LetMeOrganizeYourDay',
@@ -30,7 +30,7 @@ export default function Projects() {
   //   },
   //   {
   //     name: 'Oddam Rzeczy',
-  //     url: 'https://krzgas.github.io/Oddam-Rzeczy',
+  //     url: 'https://krzysztofgasik.github.io/Oddam-Rzeczy',
   //     description: 'Check your wardrobe and attic. Do you have any spare clothes and things? If answer is yes, please visit this app and share those things with other people. ',
   //     image: things,
   //     repo: 'Oddam-Rzeczy',
@@ -38,7 +38,7 @@ export default function Projects() {
   //   },
   //   {
   //     name: 'Catopedia',
-  //     url: 'https://krzgas.github.io/Catopedia',
+  //     url: 'https://krzysztofgasik.github.io/Catopedia',
   //     description: 'Do you love cats? If yes, this app is for you.',
   //     image: cat,
   //     repo: 'Catopedia',
@@ -46,7 +46,7 @@ export default function Projects() {
   //   },
   //   {
   //     name: 'Pollen Alert',
-  //     url: 'https://krzgas.github.io/PollenAlert',
+  //     url: 'https://krzysztofgasik.github.io/PollenAlert',
   //     description: 'Are you allergic to pollen and have allergy to grass and other allergens? Check out this app and it will tell you on which months your allergy is strongest or weakest.',
   //     image: pollen,
   //     repo: 'PollenAlert',
@@ -147,13 +147,13 @@ export default function Projects() {
           <div className="project__detailsWrapper" ref={projectDesc1}>
             <p className="project__title">Let me organize your day</p>
             <p className="project__link">
-              <a href="https://krzgas.github.io/LetMeOrganizeYourDay">
+              <a href="https://krzysztofgasik.github.io/LetMeOrganizeYourDay">
                View project on
                 <FontAwesomeIcon icon={faGlobe} className="project__linkIcon" />
               </a>
             </p>
             <p className="project__repo">
-              <a href="https://github.com/KrzGas/LetMeOrganizeYourDay">
+              <a href="https://github.com/krzysztofgasik/LetMeOrganizeYourDay">
                 View repository on <FontAwesomeIcon icon={faGithub} className="project__ghIcon"/>
               </a>
             </p>
@@ -179,13 +179,13 @@ export default function Projects() {
           <div className="project__detailsWrapper" ref={projectDesc2}>
             <p className="project__title">Oddam Rzeczy</p>
             <p className="project__link">
-              <a href="https://krzgas.github.io/Oddam-Rzeczy">
+              <a href="https://krzysztofgasik.github.io/Oddam-Rzeczy">
                View project on
                 <FontAwesomeIcon icon={faGlobe} className="project__linkIcon" />
               </a>
             </p>
             <p className="project__repo">
-              <a href="https://github.com/KrzGas/Oddam-Rzeczy">
+              <a href="https://github.com/krzysztofgasik/Oddam-Rzeczy">
                 View repository on <FontAwesomeIcon icon={faGithub} className="project__ghIcon"/>
               </a>
             </p>
@@ -213,13 +213,13 @@ export default function Projects() {
           <div className="project__detailsWrapper" ref={projectDesc3}>
             <p className="project__title">Catopedia</p>
             <p className="project__link">
-              <a href="https://krzgas.github.io/Catopedia">
+              <a href="https://krzysztofgasik.github.io/Catopedia">
                 View project on
                 <FontAwesomeIcon icon={faGlobe} className="project__linkIcon" />
               </a>
             </p>
             <p className="project__repo">
-              <a href="https://github.com/KrzGas/Catopedia">
+              <a href="https://github.com/krzysztofgasik/Catopedia">
                 View repository on <FontAwesomeIcon icon={faGithub} className="project__ghIcon"/>
               </a>
             </p>
@@ -245,13 +245,13 @@ export default function Projects() {
           <div className="project__detailsWrapper" ref={projectDesc4}>
             <p className="project__title">Pollen Alert</p>
             <p className="project__link">
-              <a href="https://krzgas.github.io/PollenAlert">
+              <a href="https://krzysztofgasik.github.io/PollenAlert">
                 View project on
                 <FontAwesomeIcon icon={faGlobe} className="project__linkIcon" />
               </a>
             </p>
             <p className="project__repo">
-              <a href="https://github.com/KrzGas/PollenAlert">
+              <a href="https://github.com/krzysztofgasik/PollenAlert">
                 View repository on <FontAwesomeIcon icon={faGithub} className="project__ghIcon"/>
               </a>
             </p>
