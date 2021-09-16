@@ -1,9 +1,11 @@
 .welcome__wrapper {
   color: $white;
+  @include theme-transition;
   display: grid;
   text-align: center;
   .welcome__leftSide {
     background: $mainColor;
+    @include theme-transition;
     padding: 4em;
     svg:last-child {
       animation: bounce 2s ease-in-out infinite;
@@ -52,6 +54,7 @@
     padding: 0;
     .welcome__leftSide {
       background: $mainColor;
+      @include theme-transition;
       padding: 6em 8em 6em 4em;
       text-align: left;
       h1 {

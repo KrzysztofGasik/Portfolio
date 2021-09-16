@@ -27,6 +27,10 @@ body {
   overflow-x: hidden;
 }
 
+.theme__light {
+  transition: all 1s ease;
+}
+
 section {
   padding: 4em 2em;
   text-align: center;

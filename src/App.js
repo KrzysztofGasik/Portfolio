@@ -9,7 +9,7 @@ import "./scss/_main.scss";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App theme__light">
       <Navigation />
       <Welcome />
       <LastProject />

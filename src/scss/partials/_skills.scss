@@ -1,9 +1,11 @@
 .skills {
   background: $mainColorLight;
+  @include theme-transition;
 }
 
 .skills__container ul li {
   background: $white;
+  @include theme-transition;
   padding: 2em;
   border-radius: 1em;
   margin: 0 0 1em 0;

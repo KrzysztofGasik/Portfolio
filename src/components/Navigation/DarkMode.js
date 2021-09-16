@@ -7,6 +7,7 @@ export default function DarkMode() {
 
   const toggleDarkMode = () => {
     setDarkMode(!toggle);
+    document.body.classList.toggle('theme__light');
     document.body.classList.toggle('theme__dark');
   };
 

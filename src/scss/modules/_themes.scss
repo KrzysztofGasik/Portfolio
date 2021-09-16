@@ -1,11 +1,17 @@
+
+@mixin theme-transition {
+  transition: background-color .75s ease, color .75s ease;
+}
+
 .theme__dark {
-  transition: all 1s ease;
   // Navigation
   .navigation__container header {
     background: $mainColorDarkThemeDark;
+    @include theme-transition;
   }
   .navigation__links {
     background: $mainColorDarkThemeDark;
+    @include theme-transition;
   }
   .darkmode__wrapper {
     .darkmode__button {
@@ -15,31 +21,39 @@
   // Welcome
   .welcome__wrapper {
     color: $white;
+    @include theme-transition;
     .welcome__leftSide {
       background: $mainColorThemeDark;
+      @include theme-transition;
     }
   }
   // Last Project
   .last__project {
     background: $mainColorLightThemeDark;
+    @include theme-transition;
   }
   .last__project::before {
     background: rgba(255, 255, 255, 0.3);
+    @include theme-transition;
   }
   .lastProject__title,
   .lastProject__link,
   .lastProject__description {
     color: $white;
+    @include theme-transition;
   }
   // Skills
   .skills {
     background: $mainColorLightThemeDark;
+    @include theme-transition;
   }
   // Projects
   .projects {
     background: $descriptionColorThemeDark;
+    @include theme-transition;
     .project__container:not(:first-of-type) {
       border-top: 2px solid $white;
+      @include theme-transition;
       padding-top: 1em;
     }
     .project__title {
@@ -49,22 +63,26 @@
     .project__repo {
       a {
         color: $white;
+        @include theme-transition;
       }
       &:hover .project_linkIcon,
       &:hover .project__ghIcon,
       &:hover a {
         cursor: pointer;
         color: $mainColorDarkThemeDark;
+        @include theme-transition;
       }
     }
     .project__description {
       color: $white;
+      @include theme-transition;
     }
     .project__imageTechstack {
       height: calc(100% - 1.9em);
       background: rgba(108, 108, 108, 0.85);
       p {
         color: $white;
+        @include theme-transition;
         font-size: 2em;
       }
     }
@@ -72,6 +90,7 @@
   // Contact
   .footer {
     background: $descriptionColorThemeDark;
+    @include theme-transition;
     .social__wrapper {
       .navigation__socialIcons {
         ul {
@@ -79,6 +98,7 @@
             color: $white;
             &:hover {
               color: $descriptionColor;
+              @include theme-transition;
             }
           }
         }

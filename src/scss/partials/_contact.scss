@@ -1,5 +1,6 @@
 .footer {
   background: $mainColorLighter;
+  @include theme-transition;
   padding: 2em;
   .social__wrapper {
     display: flex;
@@ -18,8 +19,10 @@
         }
         li a {
           color: $white;
+          @include theme-transition;
           &:hover {
             color: $descriptionColor;
+            @include theme-transition;
           }
         }
       }
