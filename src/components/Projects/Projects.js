@@ -2,7 +2,12 @@ import { React, useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faReact, faJs, faSass, faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faReact,
+  faJs,
+  faSass,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import note from "../../images/note.jpg";
 import things from "../../images/things.jpg";
@@ -10,83 +15,55 @@ import cat from "../../images/cat.jpg";
 import pollen from "../../images/pollen.jpg";
 
 export default function Projects() {
-  const projectDesc1 = useRef(null);
-  const projectDesc2 = useRef(null);
-  const projectDesc3 = useRef(null);
-  const projectDesc4 = useRef(null);
-  const projectImg1 = useRef(null);
-  const projectImg2 = useRef(null);
-  const projectImg3 = useRef(null);
-  const projectImg4 = useRef(null);
-
-  // const projects = [
-  //   {
-  //     name: 'Let me organize your day',
-  //     url: 'https://krzysztofgasik.github.io/LetMeOrganizeYourDay',
-  //     description: 'This was my first app which help me organize my day',
-  //     image: note,
-  //     repo: 'LetMeOrganizeYourDay',
-  //     stack: [faReact, faJs, faSass]
-  //   },
-  //   {
-  //     name: 'Oddam Rzeczy',
-  //     url: 'https://krzysztofgasik.github.io/Oddam-Rzeczy',
-  //     description: 'Check your wardrobe and attic. Do you have any spare clothes and things? If answer is yes, please visit this app and share those things with other people. ',
-  //     image: things,
-  //     repo: 'Oddam-Rzeczy',
-  //     stack: [faReact, faJs, faSass]
-  //   },
-  //   {
-  //     name: 'Catopedia',
-  //     url: 'https://krzysztofgasik.github.io/Catopedia',
-  //     description: 'Do you love cats? If yes, this app is for you.',
-  //     image: cat,
-  //     repo: 'Catopedia',
-  //     stack: [faReact, faJs, faSass]
-  //   },
-  //   {
-  //     name: 'Pollen Alert',
-  //     url: 'https://krzysztofgasik.github.io/PollenAlert',
-  //     description: 'Are you allergic to pollen and have allergy to grass and other allergens? Check out this app and it will tell you on which months your allergy is strongest or weakest.',
-  //     image: pollen,
-  //     repo: 'PollenAlert',
-  //     stack: [faReact, faJs, faSass]
-  //   }
-  // ];
+  const projects = [
+    {
+      name: "Let me organize your day",
+      url: "https://krzysztofgasik.github.io/LetMeOrganizeYourDay",
+      description: "This was my first app which help me organize my day",
+      image: note,
+      repo: "LetMeOrganizeYourDay",
+      stack: [faReact, faJs, faSass],
+    },
+    {
+      name: "Oddam Rzeczy",
+      url: "https://krzysztofgasik.github.io/Oddam-Rzeczy",
+      description:
+        "Check your wardrobe and attic. Do you have any spare clothes and things? If answer is yes, please visit this app and share those things with other people. ",
+      image: things,
+      repo: "Oddam-Rzeczy",
+      stack: [faReact, faJs, faSass],
+    },
+    {
+      name: "Catopedia",
+      url: "https://krzysztofgasik.github.io/Catopedia",
+      description: "Do you love cats? If yes, this app is for you.",
+      image: cat,
+      repo: "Catopedia",
+      stack: [faReact, faJs, faSass],
+    },
+    {
+      name: "Pollen Alert",
+      url: "https://krzysztofgasik.github.io/PollenAlert",
+      description:
+        "Are you allergic to pollen and have allergy to grass and other allergens? Check out this app and it will tell you on which months your allergy is strongest or weakest.",
+      image: pollen,
+      repo: "PollenAlert",
+      stack: [faReact, faJs, faSass],
+    },
+  ];
 
   const stack = [faReact, faJs, faSass];
 
+  const descriptionArr = useRef([]);
+  const imageArr = useRef([]);
+
   useEffect(() => {
     let isMobile = navigator.maxTouchPoints > 0;
-
-    const portfolioProjDesc1 = projectDesc1.current;
-    const portfolioProjDesc2 = projectDesc2.current;
-    const portfolioProjDesc3 = projectDesc3.current;
-    const portfolioProjDesc4 = projectDesc4.current;
-    const portfolioProjImg1 = projectImg1.current;
-    const portfolioProjImg2 = projectImg2.current;
-    const portfolioProjImg3 = projectImg3.current;
-    const portfolioProjImg4 = projectImg4.current;
-
+    const descriptions = Object.values(descriptionArr)[0];
+    const images = Object.values(imageArr)[0];
     gsap.registerPlugin(ScrollTrigger);
-    gsap.set(
-      [
-        portfolioProjDesc1,
-        portfolioProjDesc2,
-        portfolioProjDesc3,
-        portfolioProjDesc4,
-      ],
-      { autoAlpha: 0 }
-    );
-    gsap.set(
-      [
-        portfolioProjImg1,
-        portfolioProjImg2,
-        portfolioProjImg3,
-        portfolioProjImg4,
-      ],
-      { autoAlpha: 0 }
-    );
+    gsap.set([...descriptions], { autoAlpha: 0 });
+    gsap.set([...images], { autoAlpha: 0 });
 
     const rightAnimation = (element, trigger) => {
       if (trigger === undefined) trigger = element;
@@ -130,179 +107,76 @@ export default function Projects() {
       );
     };
 
-    leftAnimation(portfolioProjDesc1, document.querySelector(".skills"));
-    leftAnimation(portfolioProjDesc2, portfolioProjDesc1);
-    leftAnimation(portfolioProjDesc3, portfolioProjDesc2);
-    leftAnimation(portfolioProjDesc4, portfolioProjDesc3);
-    rightAnimation(portfolioProjImg1, document.querySelector(".skills"));
-    rightAnimation(portfolioProjImg2, portfolioProjImg1);
-    rightAnimation(portfolioProjImg3, portfolioProjImg2);
-    rightAnimation(portfolioProjImg4, portfolioProjImg3);
+    descriptions.forEach((desc, index, arr) => {
+      let ind = index < 1 ? document.querySelector(".skills") : index - 1;
+      let isHtmlEl = typeof ind !== "number";
+      leftAnimation(
+        desc,
+        isHtmlEl ? document.querySelector(".skills") : arr[ind]
+      );
+    });
+
+    images.forEach((img, index, arr) => {
+      let ind = index < 1 ? document.querySelector(".skills") : index - 1;
+      let isHtmlEl = typeof ind !== "number";
+      rightAnimation(img, isHtmlEl ? document.querySelector(".skills") : arr[ind]);
+    });
   }, []);
 
   return (
     <section className="projects" id="Projects">
-      <div className="project__container">
-        <div className="project__wrapper">
-          <div className="project__detailsWrapper" ref={projectDesc1}>
-            <p className="project__title">Let me organize your day</p>
-            <p className="project__link">
-              <a href="https://krzysztofgasik.github.io/LetMeOrganizeYourDay">
-               View project on
-                <FontAwesomeIcon icon={faGlobe} className="project__linkIcon" />
-              </a>
-            </p>
-            <p className="project__repo">
-              <a href="https://github.com/krzysztofgasik/LetMeOrganizeYourDay">
-                View repository on <FontAwesomeIcon icon={faGithub} className="project__ghIcon"/>
-              </a>
-            </p>
-            <p className="project__description">
-              This was my first app which help me organize my day
-            </p>
-          </div>
-          <div className="project__image" ref={projectImg1}>
-            <div className="project__imageTechstack">
-              <p>Create with:</p>
-              <div className="project__imageWrapper">
-                {stack.map((tech, index) => {
-                  return <FontAwesomeIcon key={index} icon={tech} />;
-                })}
-              </div>
-            </div>
-            <img src={note} alt="" />
-          </div>
-        </div>
-      </div>
-      <div className="project__container">
-        <div className="project__wrapper">
-          <div className="project__detailsWrapper" ref={projectDesc2}>
-            <p className="project__title">Oddam Rzeczy</p>
-            <p className="project__link">
-              <a href="https://krzysztofgasik.github.io/Oddam-Rzeczy">
-               View project on
-                <FontAwesomeIcon icon={faGlobe} className="project__linkIcon" />
-              </a>
-            </p>
-            <p className="project__repo">
-              <a href="https://github.com/krzysztofgasik/Oddam-Rzeczy">
-                View repository on <FontAwesomeIcon icon={faGithub} className="project__ghIcon"/>
-              </a>
-            </p>
-            <p className="project__description">
-              Check your wardrobe and attic. Do you have any spare clothes and
-              things? If answer is yes, please visit this app and share those
-              things with other people.
-            </p>
-          </div>
-          <div className="project__image" ref={projectImg2}>
-            <div className="project__imageTechstack">
-              <p>Create with:</p>
-              <div className="project__imageWrapper">
-                {stack.map((tech, index) => {
-                  return <FontAwesomeIcon key={index} icon={tech} />;
-                })}
-              </div>
-            </div>
-            <img src={things} alt="" />
-          </div>
-        </div>
-      </div>
-      <div className="project__container">
-        <div className="project__wrapper">
-          <div className="project__detailsWrapper" ref={projectDesc3}>
-            <p className="project__title">Catopedia</p>
-            <p className="project__link">
-              <a href="https://krzysztofgasik.github.io/Catopedia">
-                View project on
-                <FontAwesomeIcon icon={faGlobe} className="project__linkIcon" />
-              </a>
-            </p>
-            <p className="project__repo">
-              <a href="https://github.com/krzysztofgasik/Catopedia">
-                View repository on <FontAwesomeIcon icon={faGithub} className="project__ghIcon"/>
-              </a>
-            </p>
-            <p className="project__description">
-              Do you love cats? If yes, this app is for you.
-            </p>
-          </div>
-          <div className="project__image" ref={projectImg3}>
-            <div className="project__imageTechstack">
-              <p>Create with:</p>
-              <div className="project__imageWrapper">
-                {stack.map((tech, index) => {
-                  return <FontAwesomeIcon key={index} icon={tech} />;
-                })}
-              </div>
-            </div>
-            <img src={cat} alt="" />
-          </div>
-        </div>
-      </div>
-      <div className="project__container last">
-        <div className="project__wrapper">
-          <div className="project__detailsWrapper" ref={projectDesc4}>
-            <p className="project__title">Pollen Alert</p>
-            <p className="project__link">
-              <a href="https://krzysztofgasik.github.io/PollenAlert">
-                View project on
-                <FontAwesomeIcon icon={faGlobe} className="project__linkIcon" />
-              </a>
-            </p>
-            <p className="project__repo">
-              <a href="https://github.com/krzysztofgasik/PollenAlert">
-                View repository on <FontAwesomeIcon icon={faGithub} className="project__ghIcon"/>
-              </a>
-            </p>
-            <p className="project__description">
-              Are you allergic to pollen and have allergy to grass and other
-              allergens? Check out this app and it will tell you on which months
-              your allergy is strongest or weakest.
-            </p>
-          </div>
-          <div className="project__image" ref={projectImg4}>
-            <div className="project__imageTechstack">
-              <p>Create with:</p>
-              <div className="project__imageWrapper">
-                {stack.map((tech, index) => {
-                  return <FontAwesomeIcon key={index} icon={tech} />;
-                })}
-              </div>
-            </div>
-            <img src={pollen} alt="" />
-          </div>
-        </div>
-      </div>
-
-      {/* {projects.map(project => {
+      {projects.map((project, index) => {
         return (
-          <div key={project.name} className='project__container'>
-            <div className='project__wrapper'>
-              <div className='project__detailsWrapper'>
-                <p className='project__title'>{project.name}</p>
-                <p className='project__link'><a href={project.url}>{project.name}</a></p>
-                <p className='project__description'>
-                  {project.description}
+          <div
+            key={project.name}
+            className={`project__container ${
+              index === projects.length - 1 ? "last" : ""
+            }`}
+          >
+            <div className="project__wrapper">
+              <div
+                className="project__detailsWrapper"
+                ref={(project) => descriptionArr.current.push(project)}
+              >
+                <p className="project__title">{project.name}</p>
+                <p className="project__link">
+                  <a href={project.repo}>
+                    View project on
+                    <FontAwesomeIcon
+                      icon={faGlobe}
+                      className="project__linkIcon"
+                    />
+                  </a>
                 </p>
+                <p className="project__repo">
+                  <a href={project.url}>
+                    View repository on{" "}
+                    <FontAwesomeIcon
+                      icon={faGithub}
+                      className="project__ghIcon"
+                    />
+                  </a>
+                </p>
+                <p className="project__description">{project.description}</p>
               </div>
-              <div className='project__image' >
-                <div className='project__imageTechstack'>
+              <div
+                className="project__image"
+                ref={(project) => imageArr.current.push(project)}
+              >
+                <div className="project__imageTechstack">
                   <p>Create with:</p>
                   <div className="project__imageWrapper">
-                    {project.stack.map((tech, index) => {
-                      return (
-                        <FontAwesomeIcon key={index} icon={tech} />
-                      )
+                    {stack.map((tech, index) => {
+                      return <FontAwesomeIcon key={index} icon={tech} />;
                     })}
                   </div>
                 </div>
-                <img src={project.image} alt='' />
+                <img src={project.image} alt={project.name} />
               </div>
             </div>
           </div>
-        )
-      })} */}
+        );
+      })}
     </section>
   );
 }
