@@ -1,29 +1,22 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.cb874d96.chunk.css",
-    "main.js": "/Portfolio/static/js/main.a89f0e88.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.a89f0e88.chunk.js.map",
-    "runtime-main.js": "/Portfolio/static/js/runtime-main.99387300.js",
-    "runtime-main.js.map": "/Portfolio/static/js/runtime-main.99387300.js.map",
-    "static/js/2.3ccc44c2.chunk.js": "/Portfolio/static/js/2.3ccc44c2.chunk.js",
-    "static/js/2.3ccc44c2.chunk.js.map": "/Portfolio/static/js/2.3ccc44c2.chunk.js.map",
-    "static/js/3.e08fbef5.chunk.js": "/Portfolio/static/js/3.e08fbef5.chunk.js",
-    "static/js/3.e08fbef5.chunk.js.map": "/Portfolio/static/js/3.e08fbef5.chunk.js.map",
+    "main.css": "/Portfolio/static/css/main.2ab82e5d.css",
+    "main.js": "/Portfolio/static/js/main.0babf2c3.js",
+    "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/things.jpg": "/Portfolio/static/media/things.44b53e99f50bd7734d4f.jpg",
+    "static/media/tvpuls.jpg": "/Portfolio/static/media/tvpuls.20651a868110cc78af37.jpg",
+    "static/media/pollen.jpg": "/Portfolio/static/media/pollen.440c01febcf15aea3fbe.jpg",
+    "static/media/cat.jpg": "/Portfolio/static/media/cat.54cb81f4a37119ae771f.jpg",
+    "static/media/note.jpg": "/Portfolio/static/media/note.d62818a7da342199f9d7.jpg",
+    "static/media/social.svg": "/Portfolio/static/media/social.c45686562b204569f7c913e80d8a374e.svg",
+    "static/media/welcome.svg": "/Portfolio/static/media/welcome.a41761be3a48e9f653fbbd83c1bd8d7f.svg",
     "index.html": "/Portfolio/index.html",
-    "static/css/main.cb874d96.chunk.css.map": "/Portfolio/static/css/main.cb874d96.chunk.css.map",
-    "static/js/2.3ccc44c2.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.3ccc44c2.chunk.js.LICENSE.txt",
-    "static/media/cat.54cb81f4.jpg": "/Portfolio/static/media/cat.54cb81f4.jpg",
-    "static/media/note.d62818a7.jpg": "/Portfolio/static/media/note.d62818a7.jpg",
-    "static/media/pollen.440c01fe.jpg": "/Portfolio/static/media/pollen.440c01fe.jpg",
-    "static/media/social.c4568656.svg": "/Portfolio/static/media/social.c4568656.svg",
-    "static/media/things.44b53e99.jpg": "/Portfolio/static/media/things.44b53e99.jpg",
-    "static/media/tvpuls.20651a86.jpg": "/Portfolio/static/media/tvpuls.20651a86.jpg",
-    "static/media/welcome.a41761be.svg": "/Portfolio/static/media/welcome.a41761be.svg"
+    "main.2ab82e5d.css.map": "/Portfolio/static/css/main.2ab82e5d.css.map",
+    "main.0babf2c3.js.map": "/Portfolio/static/js/main.0babf2c3.js.map",
+    "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.99387300.js",
-    "static/js/2.3ccc44c2.chunk.js",
-    "static/css/main.cb874d96.chunk.css",
-    "static/js/main.a89f0e88.chunk.js"
+    "static/css/main.2ab82e5d.css",
+    "static/js/main.0babf2c3.js"
   ]
 }
