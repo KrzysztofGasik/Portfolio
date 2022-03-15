@@ -1,0 +1,144 @@
+.Wrapper {
+  color: var(--white);
+  transition: var(--theme-transition);
+  display: grid;
+  text-align: center;
+  margin-top: 5em;
+}
+.LeftSide {
+  background: var(--mainColor);
+  transition: var(--theme-transition);
+  padding: 4em;
+}
+
+.RightSide {
+  display: none;
+}
+.GetInTouch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.HandshakeIcon {
+  display: block;
+  margin-right: 1em;
+  height: 2em;
+  width: 2em;
+}
+
+.ArrowIcon {
+  animation: bounce 2s ease-in-out infinite;
+  width: 30px !important;
+  height: 30px;
+  margin-top: 2em;
+}
+
+.WrapperDark {
+  color: var(--white);
+  transition: var(--theme-transition);
+}
+
+.LeftSideDark {
+  background: var(--mainColorThemeDark);
+  transition: var(--theme-transition);
+}
+
+@media only screen and (min-width: 800px) {
+  .Wrapper {
+    text-align: center;
+    padding: 0;
+    margin-top: 0em;
+  }
+  .LeftSide {
+    padding: 4em;
+  }
+  .WrapperDark {
+    color: var(--white);
+    transition: var(--theme-transition);
+  }
+  .LeftSideDark {
+    background: var(--mainColorThemeDark);
+    transition: var(--theme-transition);
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .Wrapper {
+    height: 85vh;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 66% auto;
+    background: unset;
+    padding: 0;
+  }
+  .LeftSide {
+    background: var(--mainColor);
+    transition: var(--theme-transition);
+    padding: 6em 8em 6em 4em;
+    text-align: left;
+  }
+  .Heading {
+    font-size: 3em;
+    line-height: 1.2em;
+  }
+  .GetInTouch {
+    margin: 1em 0;
+    justify-content: flex-start;
+  }
+  .RightSide {
+    display: block;
+    margin: 5% 0 0 -50%;
+    width: 100%;
+  }
+
+  .WrapperDark {
+    color: var(--white);
+    transition: var(--theme-transition);
+  }
+  .LeftSideDark {
+    background: var(--mainColorThemeDark);
+    transition: var(--theme-transition);
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  .LeftSide {
+    padding: 6em 8em 6em 10em;
+  }
+  .WrapperDark {
+    color: var(--white);
+    transition: var(--theme-transition);
+  }
+  .LeftSideDark {
+    background: var(--mainColorThemeDark);
+    transition: var(--theme-transition);
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  .LeftSide {
+    padding: 9em 20em 6em 20em;
+  }
+  .LeftSideDark {
+    background: var(--mainColorThemeDark);
+    transition: var(--theme-transition);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-7px);
+  }
+}

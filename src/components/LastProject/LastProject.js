@@ -1,15 +1,20 @@
-import { React, useRef, useEffect } from "react";
-import gsap from "gsap";
+import { useRef, useEffect, useContext } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+import { ThemeContext } from "../../store/theme-context";
+
 import projectImg from "../../images/tvpuls.jpg";
+
+import classes from "./LastProject.module.css";
 
 export default function LastProject() {
   const leftCol = useRef(null);
   const rightCol = useRef(null);
+  const isDark = useContext(ThemeContext).isDarkTheme;
 
   useEffect(() => {
     const isMobile = navigator.maxTouchPoints > 0;
-    const startPosition = isMobile ? "top bottom" : "center center";
+    const startPosition = isMobile ? { y: -300 } : "center center";
     const leftColElements = leftCol.current;
     const rightColElements = rightCol.current;
     gsap.registerPlugin(ScrollTrigger);
@@ -53,21 +58,33 @@ export default function LastProject() {
       );
   }, []);
 
+  const classesSection = isDark
+    ? `${classes.Section} ${classes.SectionDark}`
+    : classes.Section;
+  const classesTitle = isDark
+    ? `${classes.Title} ${classes.TitleDark}`
+    : classes.Title;
+  const classesLink = isDark
+    ? `${classes.Link} ${classes.LinkDark}`
+    : classes.Link;
+  const classesDescription = isDark
+    ? `${classes.Description} ${classes.DescriptionDark}`
+    : classes.Description;
   return (
-    <section className="last__project" id="Last project">
-      <div className="column__left" ref={leftCol}>
-        <div className="project__container">
-          <p className="lastProject__title">Last Project</p>
-          <a href="https://tvpuls.pl" className="lastProject__link">
+    <section className={classesSection} id="Last project">
+      <div className={classes.ColumnLeft} ref={leftCol}>
+        <div className={classes.Wrapper}>
+          <p className={classesTitle}>Last Project</p>
+          <a href="https://tvpuls.pl" className={classesLink}>
             tvpuls.pl
           </a>
-          <p className="lastProject__description">
+          <p className={classesDescription}>
             New version of website, custom theme using lazy loading, owl
             carousel, css grid and flexbox.
           </p>
         </div>
       </div>
-      <div className="column__right" ref={rightCol}>
+      <div className={classes.ColumnRight} ref={rightCol}>
         <img src={projectImg} alt="" />
       </div>
     </section>

@@ -1,0 +1,25 @@
+.SocialList {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.GHIcon,
+.LinkedinIcon,
+.MailIcon {
+  width: 2em;
+  height: 2em;
+  margin: 1em;
+}
+
+@media screen and (max-width: 460px) {
+  .SocialList {
+    margin: 1em 0 1em 0;
+    flex-flow: row wrap;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .SocialList {
+    flex-flow: row wrap;
+  }
+}

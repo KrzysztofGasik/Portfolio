@@ -1,0 +1,12 @@
+div[class^="Project_ImageWrapper"]:hover
+  div[class^="ProjectImage_ImageTechstack"] {
+  clip-path: inset(0% 0% 0% 0%);
+  cursor: pointer;
+}
+
+div[class^="Project_ImageWrapper"]:hover
+  div[class^="ProjectImage_ImageTechstack"]
+  div[class^="ProjectImage_ImageStackWrapper"]
+  svg {
+  opacity: 1;
+}

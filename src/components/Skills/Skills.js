@@ -1,11 +1,15 @@
-import { React, useRef, useEffect } from "react";
+import { useRef, useEffect, useContext } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ThemeContext } from "../../store/theme-context";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faReact, faJs, faCss3 } from "@fortawesome/free-brands-svg-icons";
+import SkillsList from "./SkillsList/SkillsList";
+
+import classes from "./Skills.module.css";
+
 export default function Skills() {
   const skillWrapper = useRef(null);
+  const isDarkTheme = useContext(ThemeContext).isDarkTheme;
 
   useEffect(() => {
     const wrapper = skillWrapper.current;
@@ -22,52 +26,21 @@ export default function Skills() {
         duration: 1,
         ease: "Power2.easeInOut",
         scrollTrigger: {
-          trigger: ".skills",
+          trigger: "#Skills",
           start: "top bottom",
           end: "+=500",
-          scrub: 1,
-        },
+          scrub: 1
+        }
       }
     );
   }, []);
-
-  const skillSet = [
-    {
-      name: "React",
-      icon: faReact,
-      description:
-        "Components Life Cycle, Class and Functional Components, Hooks, Redux",
-    },
-    {
-      name: "JS",
-      icon: faJs,
-      description: "OOP, Functional Programming, Async/Await, ES6",
-    },
-    {
-      name: "CSS",
-      icon: faCss3,
-      description: "HTML5, CSS3, RWD, SASS, BEM, Animations, GSAP",
-    },
-  ];
+  const sectionClasses = isDarkTheme
+    ? `${classes.Wrapper} ${classes.WrapperDark}`
+    : classes.Wrapper;
 
   return (
-    <section className="skills" id="Skills" ref={skillWrapper}>
-      <div className="skills__container">
-        <ul>
-          {skillSet.map((skill) => {
-            const { name, icon, description } = skill;
-            return (
-              <li key={name}>
-                <div className="skill__icon">
-                  <FontAwesomeIcon icon={icon} className={name} />
-                </div>
-                <p className="skill__title">{name}</p>
-                <p className="skill__description">{description}</p>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+    <section className={sectionClasses} id="Skills" ref={skillWrapper}>
+      <SkillsList />
     </section>
   );
 }

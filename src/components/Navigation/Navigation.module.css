@@ -1,0 +1,23 @@
+
+
+.Wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+@media only screen and (min-width: 800px) {
+  .Wrapper {
+    background: var(--mainColorDark);
+    transition: var(--theme-transition);
+    position: relative;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .Wrapper {
+    display: grid;
+    grid-template-columns: 66% auto;
+    background: unset;
+  }
+}

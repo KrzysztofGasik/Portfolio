@@ -1,13 +1,18 @@
-import { React, useRef, useEffect } from "react";
+import { useContext, useRef, useEffect } from "react";
+import { ThemeContext } from "../../store/theme-context";
 import gsap from "gsap";
+
 import { ReactComponent as WelcomeImage } from "../../images/welcome.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHandshake } from "@fortawesome/free-solid-svg-icons";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
+import classes from "./Welcome.module.css";
+
 export default function Welcome() {
   const welcomeWrapper = useRef(null);
   const imageWrapper = useRef(null);
+  const isDarkTheme = useContext(ThemeContext).isDarkTheme;
 
   useEffect(() => {
     const isMobile = navigator.maxTouchPoints > 0;
@@ -40,22 +45,29 @@ export default function Welcome() {
         { y: "0", autoAlpha: 1, ease: "Sine.easeOut" }
       );
   }, []);
-
+  const wrapperClasses = isDarkTheme
+    ? `${classes.Wrapper} ${classes.WrapperDark}`
+    : classes.Wrapper;
+  const leftSideClasses = isDarkTheme
+    ? `${classes.LeftSide} ${classes.LeftSideDark}`
+    : classes.LeftSide;
   return (
-    <div className="welcome__wrapper" id="Home" ref={welcomeWrapper}>
-      <div className="welcome__leftSide">
-        <h1>I'm bringing your designs to reality</h1>
-        <div className="welcome__getInTouch">
-          <FontAwesomeIcon icon={faHandshake} className="handshake" />
+    <div className={wrapperClasses} id="Home" ref={welcomeWrapper}>
+      <div className={leftSideClasses}>
+        <h1 className={classes.Heading}>
+          I'm bringing your designs to reality
+        </h1>
+        <div className={classes.GetInTouch}>
+          <FontAwesomeIcon
+            icon={faHandshake}
+            className={classes.HandshakeIcon}
+          />
           <p>Let's get to know each other</p>
         </div>
-        <FontAwesomeIcon
-          className="welcome__handshakeIcon"
-          icon={faArrowDown}
-        />
+        <FontAwesomeIcon className={classes.ArrowIcon} icon={faArrowDown} />
       </div>
-      <div className="welcome__rightSide" ref={imageWrapper}>
-        <WelcomeImage className="welcome__image" />
+      <div className={classes.RightSide} ref={imageWrapper}>
+        <WelcomeImage />
       </div>
     </div>
   );

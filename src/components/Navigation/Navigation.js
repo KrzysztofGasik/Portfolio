@@ -1,35 +1,10 @@
-import { useState, useEffect, useRef } from "react";
-import { Link } from "react-scroll";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import Hamburger from "./Hamburger";
-import CloseIcon from "./CloseIcon";
-import DarkMode from "./DarkMode";
+
+import Header from "./Header/Header";
+import classes from "./Navigation.module.css"
 
 function Navigation() {
-  const [toggle, setSwitch] = useState(false);
-
-  const switchMenu = () => {
-    setSwitch(!toggle);
-  };
-
-  useEffect(() => {
-    function hideMenu() {
-      if (window.innerWidth > 800) {
-        setSwitch(false);
-      }
-    }
-    window.addEventListener("resize", hideMenu);
-  }, [toggle]);
-
-  const navigationElements = [
-    "Home",
-    "Last project",
-    "Skills",
-    "Projects",
-    "Contact",
-  ];
-
-
   const container = useRef(null);
 
   useEffect(() => {
@@ -44,37 +19,8 @@ function Navigation() {
   }, []);
 
   return (
-    <div className="navigation__container" ref={container}>
-      <header>
-        <a href="https://www.linkedin.com/in/krzysztof-gasik">
-          Krzysztof Gasik
-        </a>
-        <Hamburger onClick={switchMenu} />
-        <nav>
-          <ul
-            className={toggle ? "navigation__links navigation__links--open" : "navigation__links"}
-          >
-            {navigationElements.map((element) => {
-              return (
-                <li key={element} className={toggle ? "fade" : ""}>
-                  <Link
-                    to={element}
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={400}
-                  >
-                    {element}
-                  </Link>
-                </li>
-              );
-            })}
-            <DarkMode />
-          </ul>
-          <CloseIcon onClick={switchMenu} />
-        </nav>
-      </header>
-      {/* <DarkMode /> */}
+    <div className={classes.Wrapper} ref={container}>
+      <Header />
     </div>
   );
 }

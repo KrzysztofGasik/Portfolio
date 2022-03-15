@@ -1,0 +1,50 @@
+.Wrapper {
+  padding: 1em 0 1em 2em;
+}
+.Button {
+  background-color: var(--mainColorLighter);
+  transition: var(--theme-transition);
+  width: 86px;
+  height: 48px;
+  border-radius: 18px;
+  position: relative;
+}
+.ButtonDot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  position: absolute;
+  top: 12.5%;
+  left: 12.5%;
+  transition: all 0.4s linear;
+}
+.ButtonDot:hover {
+  cursor: pointer;
+}
+
+.Icon {
+  color: var(--gold);
+  transition: var(--theme-transition);
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.ButtonDark {
+  background-color: var(--descriptionColorThemeDark);
+}
+.ButtonDotActive {
+  left: 45%;
+  transition: all 0.4s linear;
+}
+
+@media only screen and (min-width: 800px) {
+  .Wrapper {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+  }
+}

@@ -1,0 +1,14 @@
+.Projects {
+  background: #f7f7f7;
+}
+
+.ProjectsDark {
+  background: var(--descriptionColorThemeDark);
+  transition: var(--theme-transition);
+}
+
+@media only screen and (min-width: 800px) {
+  .Projects {
+    padding: 5em;
+  }
+}

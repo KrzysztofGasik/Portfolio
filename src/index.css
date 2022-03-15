@@ -1,0 +1,76 @@
+:root {
+  --mainColor: #2472ff;
+  --mainColorDark: #105eff;
+  --mainColorLight: #3886ff;
+  --mainColorLighter: #4c9aff;
+  --descriptionColor: #3b3b3b;
+  --white: #fff;
+  --gold: #ffd700;
+
+  --mainColorThemeDark: #1f242a;
+  --mainColorDarkThemeDark: #090b0d;
+  --mainColorLightThemeDark: #2a3139;
+  --mainColorLighterThemeDark: #353d47;
+  --descriptionColorThemeDark: #6c6c6c;
+
+  --theme-transition: background-color 0.75s ease, color 0.75s ease;
+}
+
+/* Monsterrat font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+/* Poppins font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 4em 2em;
+  text-align: center;
+}
+
+@media only screen and (min-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  section {
+    padding: 4em;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  section {
+    padding: 10em 10em 4em 10em;
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  section {
+    padding: 6em 20em 4em 20em;
+  }
+}

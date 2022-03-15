@@ -1,0 +1,93 @@
+.Title {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--mainColorDark);
+  transition: var(--theme-transition);
+  letter-spacing: 0.3em;
+  font-size: 0.85em;
+}
+
+.TitleDark {
+  color: var(--white);
+}
+
+.Link,
+.Repo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.RepoUrl {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-top: 0.4em;
+  display: block;
+}
+
+.RepoUrlDark {
+  color: var(--white);
+  transition: var(--theme-transition);
+}
+
+.Repo .RepoUrl {
+  margin: 0.4em 0;
+}
+
+.LinkIcon,
+.GHIcon {
+  margin: 0.4em 0 0 1em;
+}
+.Link:hover .LinkIcon,
+.Repo:hover .GHIcon,
+.Link:hover .RepoUrl,
+.Repo:hover .RepoUrl {
+  cursor: pointer;
+  color: var(--mainColorDark);
+  transition: var(--theme-transition);
+}
+
+.LinkDark:hover .LinkIcon,
+.RepoDark:hover .GHIcon,
+.LinkDark:hover .RepoUrl,
+.RepoDark:hover .RepoUrl {
+  cursor: pointer;
+  color: var(--mainColorDarkThemeDark);
+  transition: var(--theme-transition);
+}
+
+.Description {
+  color: var(--descriptionColor);
+  transition: var(--theme-transition);
+  margin-bottom: 3em;
+  font-size: 0.85em;
+  line-height: 1.8em;
+}
+
+.DescriptionDark {
+  color: var(--white);
+  transition: var(--theme-transition);
+}
+
+@media only screen and (min-width: 800px) {
+  .Title {
+    border-top: none;
+    padding-top: 0;
+  }
+  .Title:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .Title {
+    font-size: 1em;
+  }
+  .Link {
+    font-size: 1.45em;
+  }
+  .Description {
+    font-size: 1em;
+  }
+}

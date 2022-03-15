@@ -1,0 +1,39 @@
+.Wrapper {
+  position: fixed;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+  z-index: 3;
+  transition: all 500ms ease;
+  padding: 1em;
+  color: #fff;
+}
+
+.WrapperHidden {
+  opacity: 0;
+  display: none;
+}
+
+.Icon {
+  color: #fff;
+  transition: var(--theme-transition);
+  width: 2em;
+  height: 2em;
+  transition: all 300ms linear;
+}
+.Icon:hover {
+  animation: roll 1750ms linear infinite;
+}
+
+@keyframes roll {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .Wrapper {
+    opacity: 0;
+    display: none;
+  }
+}

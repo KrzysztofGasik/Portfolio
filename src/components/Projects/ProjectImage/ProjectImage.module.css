@@ -1,0 +1,69 @@
+@import "../Project/Project.module.css";
+
+.ImageTechstack {
+  width: 100%;
+  height: calc(100% - 1.9em);
+  position: absolute;
+  background: rgba(75, 75, 75, 0.85);
+  border-radius: 0.5em;
+  clip-path: inset(0% 0% 0% 100%);
+  transition: all 0.75s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ImageTechstackDark {
+  height: calc(100% - 1.9em);
+  background: rgba(108, 108, 108, 0.85);
+}
+
+.TitleTechstack {
+  color: var(--white);
+  transition: var(--theme-transition);
+  font-size: 2em;
+}
+
+.TitleTechstackDark {
+  color: var(--white);
+  transition: var(--theme-transition);
+  font-size: 2em;
+}
+
+.ImageStackWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Icon {
+  color: var(--white);
+  transition: var(--theme-transition);
+  margin: 1em;
+  width: calc(100% / 3);
+  height: 50%;
+  opacity: 0;
+}
+
+.Icon:nth-child(1) {
+  transition: all 1s 0.3s ease-in;
+}
+.Icon:nth-child(2) {
+  transition: all 1s 0.6s ease-in;
+}
+.Icon:nth-child(3) {
+  transition: all 1s 0.9s ease-in;
+}
+
+.Image {
+  border-radius: 0.5em;
+  margin-bottom: 1.5em;
+  width: 100%;
+  max-width: none;
+}
+
+@media only screen and (min-width: 800px) {
+  /* .ImageTechstack {
+    width: calc(100% - 1em);
+    height: calc(100% - 1.75em);
+  } */
+}

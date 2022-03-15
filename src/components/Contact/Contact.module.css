@@ -1,0 +1,22 @@
+.Footer {
+  background: var(--mainColorLighter);
+  transition: var(--theme-transition);
+  padding: 2em;
+}
+
+.FooterDark {
+  background: var(--descriptionColorThemeDark);
+  transition: var(--theme-transition);
+}
+
+.SocialWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media screen and (max-width: 460px) {
+  .SocialWrapper {
+    flex-flow: column wrap;
+  }
+}

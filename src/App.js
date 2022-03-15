@@ -5,11 +5,10 @@ import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 
-import "./scss/_main.scss";
 
 function App() {
   return (
-    <div className="App theme__light">
+    <div className="App">
       <Navigation />
       <Welcome />
       <LastProject />

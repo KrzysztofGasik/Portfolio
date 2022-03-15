@@ -1,0 +1,15 @@
+.Anchor {
+  color: var(--white);
+  transition: var(--theme-transition);
+}
+.Anchor:hover {
+  color: var(--descriptionColor);
+  transition: var(--theme-transition);
+}
+.AnchorDark {
+  color: var(--white);
+}
+.AnchorDark:hover {
+  color: var(--descriptionColor);
+  transition: var(--theme-transition);
+}

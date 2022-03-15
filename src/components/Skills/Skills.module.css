@@ -1,0 +1,22 @@
+.Wrapper {
+  background: var(--mainColorLight);
+  transition: var(--theme-transition);
+}
+
+.WrapperDark {
+  background: var(--mainColorLightThemeDark);
+  transition: var(--theme-transition);
+}
+
+@media only screen and (min-width: 800px) {
+  .Wrapper {
+    margin: -5em 0 -3em 0;
+    padding: 7em 0 0 0;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  .Wrapper {
+    padding: 7em 8em 0em 8em;
+  }
+}

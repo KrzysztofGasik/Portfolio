@@ -1,10 +1,20 @@
-import { React, useRef, useEffect } from "react";
+import { useRef, useEffect, useContext } from "react";
 import gsap from "gsap";
+
+import { ThemeContext } from "../../store/theme-context";
+
 import { ReactComponent as Social } from "../../images/social.svg";
-import SocialIcons from "./SocialIcons";
+import SocialList from "./SocialList/SocialList";
+
+import projectClasses from "../Projects/ProjectsList/ProjectsList.module.css";
+import classes from "./Contact.module.css";
 
 export default function Contact() {
   const socialWrapper = useRef(null);
+  const isDarkTheme = useContext(ThemeContext).isDarkTheme;
+  const footerClasses = isDarkTheme
+    ? `${classes.FooterDark} ${classes.Footer}`
+    : classes.Footer;
   useEffect(() => {
     const [imageElements] = socialWrapper.current.children;
     const person = imageElements.getElementById("person");
@@ -17,7 +27,7 @@ export default function Contact() {
         ...person.children,
         ...fb.children,
         ...linkedin.children,
-        ...twitter.children,
+        ...twitter.children
       ],
       { autoAlpha: 0 }
     );
@@ -25,7 +35,7 @@ export default function Contact() {
     const timeLine = gsap.timeline();
 
     const startAnimation = () => {
-      const last = document.querySelector(".project__container.last");
+      const last = document.querySelector(`.${projectClasses.Last}`);
       if (window.scrollY > last.offsetTop) {
         runAnimation();
         document.removeEventListener("scroll", startAnimation);
@@ -45,7 +55,7 @@ export default function Contact() {
             y: "0",
             autoAlpha: 1,
             ease: "Sine.easeOut",
-            stagger: 0.5,
+            stagger: 0.5
           }
         )
         .fromTo(
@@ -55,7 +65,7 @@ export default function Contact() {
             y: "0",
             autoAlpha: 1,
             ease: "Sine.easeOut",
-            stagger: 0.5,
+            stagger: 0.5
           }
         )
         .fromTo(
@@ -65,7 +75,7 @@ export default function Contact() {
             x: "0",
             autoAlpha: 1,
             ease: "Sine.easeOut",
-            stagger: 0.5,
+            stagger: 0.5
           }
         )
         .fromTo(
@@ -75,17 +85,18 @@ export default function Contact() {
             y: "0",
             autoAlpha: 1,
             ease: "Sine.easeOut",
-            stagger: 0.5,
+            stagger: 0.5
           }
-        ).delay(1);
+        )
+        .delay(1);
     };
   }, []);
 
   return (
-    <footer className="footer" id="Contact">
-      <div className="social__wrapper" ref={socialWrapper}>
+    <footer className={footerClasses} id="Contact">
+      <div className={classes.SocialWrapper} ref={socialWrapper}>
         <Social />
-        <SocialIcons />
+        <SocialList />
       </div>
     </footer>
   );

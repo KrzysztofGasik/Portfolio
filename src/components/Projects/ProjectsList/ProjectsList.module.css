@@ -1,0 +1,29 @@
+.Container:not(:first-of-type) {
+  border-top: 2px solid var(--mainColorDark);
+  transition: var(--theme-transition);
+  padding-top: 1em;
+}
+
+.ContainerDark:not(:first-of-type) {
+  border-top: 2px solid var(--white);
+  transition: var(--theme-transition);
+  padding-top: 1em;
+}
+
+@media only screen and (min-width: 800px) {
+  .Container:not(:first-of-type) {
+    border-top: none;
+    padding-top: 0;
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  .Container {
+    padding: 0 15em;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .Container {
+    padding: 0 25em;
+  }
+}

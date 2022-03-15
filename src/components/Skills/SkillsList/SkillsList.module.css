@@ -1,0 +1,33 @@
+.ListElement {
+  background: var(--white);
+  transition: var(--theme-transition);
+  padding: 2em;
+  border-radius: 1em;
+  margin: 0 0 1em 0;
+}
+.Icon {
+  height: 100px;
+  display: grid;
+  place-content: center;
+  margin: 0 auto;
+}
+.React,
+.JS,
+.CSS {
+  height: 100px;
+  width: 100px;
+}
+.Title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0.5em 0;
+}
+
+@media only screen and (min-width: 800px) {
+  .List {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    padding: 0 1em;
+  }
+}

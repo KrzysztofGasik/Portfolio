@@ -1,0 +1,71 @@
+.Header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background: var(--mainColorDark);
+  transition: var(--theme-transition);
+}
+.Nav {
+  width: 100%;
+}
+.Profile {
+  display: block;
+  padding: 0 1em;
+  color: #fff;
+  text-decoration: none;
+}
+
+.HeaderDark {
+  transition: var(--theme-transition);
+  background: var(--mainColorDarkThemeDark);
+}
+
+@media only screen and (min-width: 800px) {
+  .Header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+  }
+  .Nav {
+    width: auto;
+  }
+
+  .Profile {
+    font-size: 1.25em;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .Header {
+    background: var(--mainColorDark);
+    padding: 2em 2em 2em 4em;
+    transition: var(--theme-transition);
+  }
+  .HeaderDark {
+    transition: var(--theme-transition);
+    background: var(--mainColorDarkThemeDark);
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  .Header {
+    padding: 2em 2em 2em 10em;
+  }
+  .HeaderDark {
+    transition: var(--theme-transition);
+    background: var(--mainColorDarkThemeDark);
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  .Header {
+    padding: 2em 2em 2em 20em;
+  }
+  .HeaderDark {
+    transition: var(--theme-transition);
+    background: var(--mainColorDarkThemeDark);
+  }
+}
