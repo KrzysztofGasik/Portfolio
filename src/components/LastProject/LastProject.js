@@ -10,7 +10,7 @@ import classes from "./LastProject.module.css";
 export default function LastProject() {
   const leftCol = useRef(null);
   const rightCol = useRef(null);
-  const isDark = useContext(ThemeContext).isDarkTheme;
+  const isDarkTheme = useContext(ThemeContext).isDarkTheme;
 
   useEffect(() => {
     const isMobile = navigator.maxTouchPoints > 0;
@@ -58,16 +58,16 @@ export default function LastProject() {
       );
   }, []);
 
-  const classesSection = isDark
+  const classesSection = isDarkTheme
     ? `${classes.Section} ${classes.SectionDark}`
     : classes.Section;
-  const classesTitle = isDark
+  const classesTitle = isDarkTheme
     ? `${classes.Title} ${classes.TitleDark}`
     : classes.Title;
-  const classesLink = isDark
+  const classesLink = isDarkTheme
     ? `${classes.Link} ${classes.LinkDark}`
     : classes.Link;
-  const classesDescription = isDark
+  const classesDescription = isDarkTheme
     ? `${classes.Description} ${classes.DescriptionDark}`
     : classes.Description;
   return (

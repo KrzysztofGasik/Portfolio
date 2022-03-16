@@ -1,5 +1,5 @@
 .Wrapper {
-  padding: 1em 0 1em 2em;
+  padding: 1em 0 1em 1em;
 }
 .Button {
   background-color: var(--mainColorLighter);
@@ -46,5 +46,6 @@
     justify-self: center;
     align-self: center;
     margin: 0;
+    padding: 1em 0 1em 2em;
   }
 }

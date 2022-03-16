@@ -38,8 +38,8 @@
 .Icon {
   color: var(--white);
   transition: var(--theme-transition);
-  margin: 1em;
-  width: calc(100% / 3);
+  margin: 0.5em;
+  width: 25%;
   height: 50%;
   opacity: 0;
 }
