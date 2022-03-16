@@ -69,7 +69,7 @@
     flex-direction: unset;
     width: auto;
     clip-path: none;
-    transition: none;
+    transition: var(--theme-transition);
     z-index: unset;
     justify-content: flex-end;
   }

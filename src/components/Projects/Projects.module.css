@@ -1,5 +1,6 @@
 .Projects {
   background: #f7f7f7;
+  transition: var(--theme-transition);
 }
 
 .ProjectsDark {

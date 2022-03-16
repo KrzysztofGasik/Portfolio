@@ -1,5 +1,6 @@
 .Section {
   position: relative;
+  transition: var(--theme-transition);
 }
 .SectionDark {
   background: var(--mainColorLightThemeDark);
