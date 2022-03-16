@@ -14,7 +14,7 @@ export default function LastProject() {
 
   useEffect(() => {
     const isMobile = navigator.maxTouchPoints > 0;
-    const startPosition = isMobile ? { y: -300 } : "center center";
+    const startPosition = isMobile ? "top bottom" : "center center";
     const leftColElements = leftCol.current;
     const rightColElements = rightCol.current;
     gsap.registerPlugin(ScrollTrigger);
