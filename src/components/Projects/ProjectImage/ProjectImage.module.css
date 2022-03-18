@@ -15,7 +15,7 @@
 
 .ImageTechstackDark {
   height: calc(100% - 1.9em);
-  background: rgba(108, 108, 108, 0.85);
+  background: rgba(255,255,255,0.75) ;
 }
 
 .TitleTechstack {
@@ -25,9 +25,10 @@
 }
 
 .TitleTechstackDark {
-  color: var(--white);
+  color: var(--description);
   transition: var(--theme-transition);
   font-size: 2em;
+  font-weight: bold;
 }
 
 .ImageStackWrapper {
