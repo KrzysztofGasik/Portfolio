@@ -8,6 +8,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import classes from "./ProjectDetails.module.css";
 
 const ProjectDetails = ({ details }) => {
+  const httpPath = "https://github.com/KrzysztofGasik/"
   const isDarkTheme = useContext(ThemeContext).isDarkTheme;
   const titleClasses = isDarkTheme ? `${classes.TitleDark} ${classes.Title}` : classes.Title;
   const linkClasses = isDarkTheme ? `${classes.LinkDark} ${classes.Link}` : classes.Link;
@@ -18,13 +19,13 @@ const ProjectDetails = ({ details }) => {
     <Fragment>
       <p className={titleClasses}>{details.name}</p>
       <p className={linkClasses}>
-        <a href={details.repo} className={repourlClasses}>
+        <a href={details.url} className={repourlClasses}>
           View project on
           <FontAwesomeIcon icon={faGlobe} className={classes.LinkIcon} />
         </a>
       </p>
       <p className={repoClasses}>
-        <a href={details.url} className={repourlClasses}>
+        <a href={`${httpPath}${details.repo}`} className={repourlClasses}>
           View repository on
           <FontAwesomeIcon icon={faGithub} className={classes.GHIcon} />
         </a>
