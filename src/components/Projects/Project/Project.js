@@ -6,7 +6,7 @@ import ProjectDetails from "../ProjectDetails/ProjectDetails";
 import ProjectImage from "../ProjectImage/ProjectImage";
 
 import classes from "./Project.module.css";
-import "./Project.css"
+import "./Project.css";
 
 const Project = ({ projectObj }) => {
   const descriptionArr = useRef([]);
@@ -35,8 +35,8 @@ const Project = ({ projectObj }) => {
             trigger: trigger,
             start: isMobile ? "top bottom" : "",
             end: isMobile ? "bottom center" : "",
-            scrub: 1
-          }
+            scrub: 1,
+          },
         }
       );
     };
@@ -56,8 +56,8 @@ const Project = ({ projectObj }) => {
             trigger: trigger,
             start: isMobile ? "top bottom" : "",
             end: isMobile ? "bottom center" : "",
-            scrub: 1
-          }
+            scrub: 1,
+          },
         }
       );
     };
@@ -80,18 +80,18 @@ const Project = ({ projectObj }) => {
       );
     });
   }, []);
-  
+
   return (
     <div className={classes.Wrapper}>
       <div
         className={classes.DetailsWrapper}
-        ref={project => descriptionArr.current.push(project)}
+        ref={(project) => descriptionArr.current.push(project)}
       >
         <ProjectDetails details={projectObj} />
       </div>
       <div
         className={classes.ImageWrapper}
-        ref={project => imageArr.current.push(project)}
+        ref={(project) => imageArr.current.push(project)}
       >
         <ProjectImage details={projectObj} />
       </div>

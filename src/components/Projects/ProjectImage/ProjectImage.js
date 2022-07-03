@@ -7,9 +7,12 @@ import { faReact, faJs, faCss3 } from "@fortawesome/free-brands-svg-icons";
 import classes from "./ProjectImage.module.css";
 import "./ProjectImage.css";
 
+import { ReactComponent as FirebaseIcon } from "../../../images/firebase-icon.svg";
+
 const stack = [faReact, faJs, faCss3];
 
 const ProjectImage = ({ details }) => {
+  const isFirebase = details.name === "Share with others";
   const isDarkTheme = useContext(ThemeContext).isDarkTheme;
   const imageTechStackClasses = isDarkTheme
     ? `${classes.ImageTechstackDark} ${classes.ImageTechstack}`
@@ -24,7 +27,18 @@ const ProjectImage = ({ details }) => {
         <div className={classes.ImageStackWrapper}>
           {stack.map((tech, index) => {
             let iconClasses = `${classes.Icon}`;
-            return (
+            let isLast = index === stack.length - 1;
+
+            return isLast && isFirebase ? (
+              <Fragment>
+                <FontAwesomeIcon
+                  key={index}
+                  icon={tech}
+                  className={iconClasses}
+                />
+                <FirebaseIcon className={iconClasses}/>
+              </Fragment>
+            ) : (
               <FontAwesomeIcon
                 key={index}
                 icon={tech}
