@@ -8,7 +8,7 @@ import ProjectImage from "../ProjectImage/ProjectImage";
 import classes from "./Project.module.css";
 import "./Project.css";
 
-const Project = ({ projectObj }) => {
+const Project = ({ projectObj, totalNum }) => {
   const descriptionArr = useRef([]);
   const imageArr = useRef([]);
 
@@ -20,28 +20,7 @@ const Project = ({ projectObj }) => {
     gsap.set([...descriptions], { autoAlpha: 0 });
     gsap.set([...images], { autoAlpha: 0 });
 
-    const rightAnimation = (element, trigger) => {
-      if (trigger === undefined) trigger = element;
-      const timeLine = gsap.timeline();
-      timeLine.fromTo(
-        element,
-        { clipPath: "polygon(100% 100%, 100% 100%, 0% 100%, 0 100%)" },
-        {
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-          autoAlpha: 1,
-          duration: 1,
-          ease: "Power2.easeInOut",
-          scrollTrigger: {
-            trigger: trigger,
-            start: isMobile ? "top bottom" : "",
-            end: isMobile ? "bottom center" : "",
-            scrub: 1,
-          },
-        }
-      );
-    };
-
-    const leftAnimation = (element, trigger) => {
+    const animateElement = (element, trigger) => {
       if (trigger === undefined) trigger = element;
       const timeLine = gsap.timeline();
       timeLine.fromTo(
@@ -65,7 +44,7 @@ const Project = ({ projectObj }) => {
     descriptions.forEach((desc, index, arr) => {
       let ind = index < 1 ? document.querySelector("#Skills") : index - 1;
       let isHtmlEl = typeof ind !== "number";
-      leftAnimation(
+      animateElement(
         desc,
         isHtmlEl ? document.querySelector("#Skills") : arr[ind]
       );
@@ -74,15 +53,21 @@ const Project = ({ projectObj }) => {
     images.forEach((img, index, arr) => {
       let ind = index < 1 ? document.querySelector("#Skills") : index - 1;
       let isHtmlEl = typeof ind !== "number";
-      rightAnimation(
+      animateElement(
         img,
         isHtmlEl ? document.querySelector("#Skills") : arr[ind]
       );
     });
+
   }, []);
 
+  const wrapperClasses =
+    projectObj.orientation === "LTR"
+      ? classes.Wrapper__LTR
+      : classes.Wrapper__RTL;
+
   return (
-    <div className={classes.Wrapper}>
+    <div className={wrapperClasses}>
       <div
         className={classes.DetailsWrapper}
         ref={(project) => descriptionArr.current.push(project)}

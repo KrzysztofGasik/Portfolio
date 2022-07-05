@@ -3,7 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import { ThemeContext } from "../../store/theme-context";
 
-import projectImg from "../../images/tvpuls.jpg";
+import projectImg from "../../images/share-with-others-big.jpg";
 
 import classes from "./LastProject.module.css";
 
@@ -70,17 +70,17 @@ export default function LastProject() {
   const classesDescription = isDarkTheme
     ? `${classes.Description} ${classes.DescriptionDark}`
     : classes.Description;
+
   return (
     <section className={classesSection} id="Last project">
       <div className={classes.ColumnLeft} ref={leftCol}>
         <div className={classes.Wrapper}>
           <p className={classesTitle}>Last Project</p>
-          <a href="https://tvpuls.pl" className={classesLink}>
-            tvpuls.pl
+          <a href="https://share-with-others.web.app/" className={classesLink}>
+            Share with others web app
           </a>
           <p className={classesDescription}>
-            New version of website, custom theme using lazy loading, owl
-            carousel, css grid and flexbox.
+          New version of project Oddam Rzeczy
           </p>
         </div>
       </div>

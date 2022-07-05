@@ -8,13 +8,23 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import classes from "./ProjectDetails.module.css";
 
 const ProjectDetails = ({ details }) => {
-  const httpPath = "https://github.com/KrzysztofGasik/"
+  const httpPath = "https://github.com/KrzysztofGasik/";
   const isDarkTheme = useContext(ThemeContext).isDarkTheme;
-  const titleClasses = isDarkTheme ? `${classes.TitleDark} ${classes.Title}` : classes.Title;
-  const linkClasses = isDarkTheme ? `${classes.LinkDark} ${classes.Link}` : classes.Link;
-  const repoClasses =isDarkTheme ? `${classes.RepoDark} ${classes.Repo}` : classes.Repo;
-  const repourlClasses = isDarkTheme ? `${classes.RepoUrlDark} ${classes.RepoUrl}` : classes.RepoUrl;
-  const descriptionClasses = isDarkTheme ? `${classes.DescriptionDark} ${classes.Description}` : classes.Description;
+  const titleClasses = isDarkTheme
+    ? `${classes.TitleDark} ${classes.Title}`
+    : classes.Title;
+  const linkClasses = isDarkTheme
+    ? `${classes.LinkDark} ${classes.Link}`
+    : classes.Link;
+  const repoClasses = isDarkTheme
+    ? `${classes.RepoDark} ${classes.Repo}`
+    : classes.Repo;
+  const repourlClasses = isDarkTheme
+    ? `${classes.RepoUrlDark} ${classes.RepoUrl}`
+    : classes.RepoUrl;
+  const descriptionClasses = isDarkTheme
+    ? `${classes.DescriptionDark} ${classes.Description}`
+    : classes.Description;
   return (
     <Fragment>
       <p className={titleClasses}>{details.name}</p>
@@ -25,10 +35,12 @@ const ProjectDetails = ({ details }) => {
         </a>
       </p>
       <p className={repoClasses}>
-        <a href={`${httpPath}${details.repo}`} className={repourlClasses}>
-          View repository on
-          <FontAwesomeIcon icon={faGithub} className={classes.GHIcon} />
-        </a>
+        {details.repo && (
+          <a href={`${httpPath}${details.repo}`} className={repourlClasses}>
+            View repository on
+            <FontAwesomeIcon icon={faGithub} className={classes.GHIcon} />
+          </a>
+        )}
       </p>
       <p className={descriptionClasses}>{details.description}</p>
     </Fragment>

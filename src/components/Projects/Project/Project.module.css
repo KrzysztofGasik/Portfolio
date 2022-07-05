@@ -8,10 +8,16 @@
 }
 
 @media only screen and (min-width: 800px) {
-  .Wrapper {
+  .Wrapper__LTR {
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-areas: "project-description project-image";
+  }
+
+  .Wrapper__RTL {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: "project-image project-description";
   }
 
   .DetailsWrapper {

@@ -12,6 +12,7 @@ import { ReactComponent as FirebaseIcon } from "../../../images/firebase-icon.sv
 const stack = [faReact, faJs, faCss3];
 
 const ProjectImage = ({ details }) => {
+  const isTVPulsProject = details.name === "TV PULS";
   const isFirebase = details.name === "Share with others";
   const isDarkTheme = useContext(ThemeContext).isDarkTheme;
   const imageTechStackClasses = isDarkTheme
@@ -30,15 +31,11 @@ const ProjectImage = ({ details }) => {
             let isLast = index === stack.length - 1;
 
             return isLast && isFirebase ? (
-              <Fragment>
-                <FontAwesomeIcon
-                  key={index}
-                  icon={tech}
-                  className={iconClasses}
-                />
-                <FirebaseIcon className={iconClasses}/>
+              <Fragment key={index}>
+                <FontAwesomeIcon icon={tech} className={iconClasses} />
+                <FirebaseIcon className={iconClasses} />
               </Fragment>
-            ) : (
+            ) : isTVPulsProject && index === 0 ? null : (
               <FontAwesomeIcon
                 key={index}
                 icon={tech}
