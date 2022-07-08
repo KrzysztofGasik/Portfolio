@@ -80,7 +80,8 @@ export default function LastProject() {
             Share with others web app
           </a>
           <p className={classesDescription}>
-          New version of project Oddam Rzeczy
+            New version of project Oddam Rzeczy. Rebuild from class to hooks,
+            from scss to css modules, from local storage to firebase.
           </p>
         </div>
       </div>
